@@ -334,13 +334,8 @@ header {
     margin: auto;
     width: 260px;
     height: 260px;
-    transition: transform 0.3s ease, background-color 0.4s ease;
   }
   
-  .photo img:hover {
-    transform: scale(1.04);
-  } 
-
   .buttons {
     flex-direction: column;
     align-items: center;
@@ -439,3 +434,4 @@ header {
     text-align: center;
   }
 }
+
