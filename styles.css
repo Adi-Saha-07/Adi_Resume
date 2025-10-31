@@ -91,7 +91,7 @@ header {
 }
 
 .right a:hover {
-  color: #0091ff;
+  color: #e9ab00;
 }
 
 .right a:not(:last-child)::after {
@@ -172,7 +172,7 @@ header {
     font-weight: 600;
   }
   header .nav-links a:hover {
-    color: #0091ff;
+    color: #e9ab00;
   }
 
   .nav-links {
@@ -366,7 +366,8 @@ header {
 /* picture of adittya */
 
 .footer {
-  background-color: #fcffff;
+  /* background-color: #f5ffff; */
+  background-color: #081c32;
   padding: 40px 60px;
   border-top: 1px solid #ccc;
   font-family: "Poppins", sans-serif;
@@ -384,19 +385,19 @@ header {
   font-size: 18px;
   font-weight: 700;
   margin-bottom: 10px;
-  color: #111;
+  color: #ff4444;
 }
 
 .footer-section p a {
   font-size: 16px;
-  color: #111;
+  color: #ffffff;
   text-decoration: none;
-  color: #000000;
+  color: #ffffff;
   transition: 0.2s ease;
 }
 
 .footer-section p a:hover {
-  color: #0091ff;
+  color: #ff6262;
 }
 
 .social-icons {
@@ -406,14 +407,14 @@ header {
 }
 
 .social-icons a {
-  color: #111;
+  color: #ffffff;
   font-size: 22px;
   text-decoration: none;
   transition: 0.2s ease;
 }
 
 .social-icons a:hover {
-  color: #0091ff; /* yellow hover effect */
+  color: #ff6262; /* yellow hover effect */
 }
 
 .footer-bottom {
@@ -421,7 +422,7 @@ header {
   padding-top: 10px;
   text-align: right;
   font-size: 14px;
-  color: #555;
+  color: #ffffff;
 }
 
 /* Responsive for mobile */
@@ -697,4 +698,3 @@ header {
     padding-bottom: 25px;
   }
 }
-
