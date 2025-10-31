@@ -194,12 +194,12 @@ header {
   border-radius: 50%;
   object-fit: cover;
   border: solid #000000;
-  transition: transform 0.3s ease, background-color 0.4s ease;
+  /* transition: transform 0.3s ease, background-color 0.4s ease; */
 }
 
-.photo img:hover {
+/* .photo img:hover {
   transform: scale(1.04);
-} 
+}  */
 
 .content {
   max-width: 600px;
@@ -335,7 +335,7 @@ header {
     width: 260px;
     height: 260px;
   }
-  
+
   .buttons {
     flex-direction: column;
     align-items: center;
@@ -434,5 +434,3 @@ header {
     text-align: center;
   }
 }
-
-
