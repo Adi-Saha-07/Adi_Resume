@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: #f7f7f7;
+  background-color: #ffffff;
   color: #111;
 }
 
@@ -28,9 +28,15 @@ body {
 }
 
 /* ========== HEADER ========== */
+header {
+  position: relative;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* shadow bhi added here */
+}
+
 .top-header {
   width: 100%;
-  background-color: #f7f7f7;
+  background:  #ffffff;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -85,7 +91,7 @@ body {
 }
 
 .right a:hover {
-  color: #e6bb2d;
+  color: #0091ff;
 }
 
 .right a:not(:last-child)::after {
@@ -99,19 +105,17 @@ body {
 }
 
 /* Responsive */
-@media (max-width: 720px) {
+/* @media (max-width: 720px) {
   .top-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-    padding: 10px 25px;
+    display: none;
   }
 
   .right {
     width: 100%;
     justify-content: space-around;
   }
-}
+} */
+
 @media (max-width: 700px) {
   .top-header {
     display: none;
@@ -124,7 +128,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 15px 25px;
-  background: #ffffffe3;
+  background:  #f2f2f2;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -141,7 +145,7 @@ header {
   .nav-links {
     display: none;
     flex-direction: column;
-    background: #fff;
+    background: #ffffff;
     position: absolute;
     top: 80px; /* adjust based on header height */
     right: 20px;
@@ -150,6 +154,7 @@ header {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
     padding: 15px;
     text-align: center;
+    z-index: 2000; /* 👈 Ensures menu stays on top */
   }
 
   .nav-links.active {
@@ -167,7 +172,7 @@ header {
     font-weight: 600;
   }
   header .nav-links a:hover {
-    color: #e6bb2d;
+    color: #0091ff;
   }
 
   .nav-links {
@@ -361,7 +366,7 @@ header {
 /* picture of adittya */
 
 .footer {
-  background-color: #edf7f6;
+  background-color: #f4ffff;
   padding: 40px 60px;
   border-top: 1px solid #ccc;
   font-family: "Poppins", sans-serif;
@@ -391,7 +396,7 @@ header {
 }
 
 .footer-section p a:hover {
-  color: #fda200;
+  color: #0091ff;
 }
 
 .social-icons {
@@ -408,7 +413,7 @@ header {
 }
 
 .social-icons a:hover {
-  color: #fda200; /* yellow hover effect */
+  color: #0091ff; /* yellow hover effect */
 }
 
 .footer-bottom {
@@ -432,5 +437,263 @@ header {
 
   .footer-bottom {
     text-align: center;
+  }
+}
+
+
+
+/*Index2.html*/
+/* ====== Education Section ====== */
+.education-section {
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.section-title {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.5rem;
+  font-weight: 750;
+  margin-bottom: 40px;
+  color: #242424;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.education-container {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.education-item {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  flex-direction: row-reverse;
+  justify-content: center;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 30px;
+}
+
+.education-item:last-child {
+  border-bottom: none;
+}
+
+.edu-image img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 0 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.edu-image img:hover {
+  transform: scale(1.05);
+}
+
+.edu-details {
+  text-align: left;
+  max-width: 100%;
+  margin-right: auto ;
+}
+
+.edu-details h3 {
+  
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.edu-details p {
+  margin: 4px 0;
+  color: #555;
+}
+
+.edu-link {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 8px 18px;
+  text-decoration: none;
+  color: #fff;
+  background: linear-gradient(135deg, #0091ff, #57c4ff);
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.edu-link:hover {
+  background: linear-gradient(135deg, #007bff, #0099cc);
+  transform: translateY(-2px);
+}
+/* Responsive */
+@media (max-width: 768px) {
+
+.education-container {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+  .education-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .edu-details {
+    text-align: center;
+  }
+}
+
+
+
+
+
+/*index5.html*/
+/* CONTACT SECTION */
+.contact-section {
+  background: #fff;
+  padding: 70px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-container {
+  display: flex;
+  gap: 60px;
+  max-width: 1100px;
+  width: 90%;
+
+  border-radius: 16px;
+  padding: 50px;
+  transition: 0.3s ease;
+}
+
+/* LEFT SIDE */
+.contact-info {
+  flex: 1;
+  border-right: 1px solid #e5e7eb;
+  padding-right: 40px;
+}
+
+.contact-info h2 {
+  font-size: 2rem;
+  color: #1e3a8a;
+  margin-bottom: 15px;
+}
+
+.contact-info p {
+  color: #4b5563;
+  margin-bottom: 35px;
+  line-height: 1.6;
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.info-item i {
+  background: linear-gradient(135deg, #0091ff, #57c4ff);
+  color: #fff;
+  padding: 12px;
+  border-radius: 50%;
+  font-size: 18px;
+}
+
+.info-item h4 {
+  font-size: 1rem;
+  color: #1e3a8a;
+  margin: 0;
+}
+
+.info-item p {
+  color: #374151;
+  margin: 5px 0 0;
+}
+
+/* RIGHT SIDE */
+.contact-form {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+}
+
+.info-item p a {
+  font-size: 16px;
+  color: #111;
+  text-decoration: none;
+  color: #000000;
+  transition: 0.2s ease;
+}
+
+.info-item p a:hover {
+  color: #0091ff;
+}
+
+.contact-form{
+  margin-top:17px ;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 1rem;
+  color: #111827;
+  background-color: #f9fafb;
+  transition: all 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #2563eb;
+  background: #fff;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
+.contact-form button {
+  background: linear-gradient(135deg, #0091ff, #57c4ff);
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 14px 0;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: linear-gradient(135deg, #007bff, #0099cc);
+  transform: translateY(-2px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .contact-container {
+    flex-direction: column;
+    padding: 40px 25px;
+  }
+
+  .contact-info {
+    border-right: none;
+    border-bottom: 1px solid #e5e7eb;
+    padding-right: 0;
+    padding-bottom: 25px;
   }
 }
