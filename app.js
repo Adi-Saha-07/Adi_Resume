@@ -46,3 +46,31 @@ window.addEventListener("resize", () => {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
 });
+
+const preloader = document.getElementById("preloader");
+
+preloader.style.display = "none";
+
+let loaderShown = false;
+
+const slowNetworkTimer = setTimeout(() => {
+  if (document.readyState !== "complete") {
+    preloader.style.display = "flex";
+    loaderShown = true;
+  }
+}, 1500);
+
+window.addEventListener("load", () => {
+  clearTimeout(slowNetworkTimer);
+
+  if (loaderShown) {
+
+    preloader.classList.add("hide");
+    setTimeout(() => {
+      preloader.style.display = "none";
+    }, 600);
+  } else {
+
+    preloader.style.display = "none";
+  }
+});
