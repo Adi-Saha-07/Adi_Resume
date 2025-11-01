@@ -253,7 +253,7 @@ header {
 .content h2 {
   font-family: 'Times New Roman', Times, serif;
   margin: 15px;
-  font-size: 28px;
+  font-size: 27px;
   font-weight: 800;
   color: #e7f8ff;
 }
@@ -786,4 +786,5 @@ header {
     padding-bottom: 25px;
   }
 }
+
 
