@@ -218,6 +218,29 @@ header {
   }
 }
 
+.menu-toggle {
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+
+.menu-toggle:focus,
+.menu-toggle:active {
+  outline: none;
+  box-shadow: none;
+}
+
+.nav-links a {
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+
+.nav-links a:focus,
+.nav-links a:active {
+  outline: none;
+  box-shadow: none;
+}
+
+
 
 /* Main Section */
 .home {
@@ -890,4 +913,5 @@ header {
     padding-bottom: 25px;
   }
 }
+
 
