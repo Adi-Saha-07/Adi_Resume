@@ -43,6 +43,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+
+/*Backgroud effect*/
 const canvas = document.getElementById("matrixRain");
 const ctx = canvas.getContext("2d");
 
@@ -53,95 +55,61 @@ function resizeCanvas() {
 resizeCanvas();
 window.addEventListener("resize", resizeCanvas);
 
-// ===== CONFIG =====
-const stars = [];
-const total = 800;
-const depth = 1200;
-let speed = 1; // ship speed
+// Mobile check
+const isMobile = window.innerWidth <= 850;
+
+// Particle setup
+const particles = [];
+const total = 400;
+const depth = 1000;
+let mouseX = 0, mouseY = 0;
 
 for (let i = 0; i < total; i++) {
-  stars.push({
+  particles.push({
     x: (Math.random() - 0.5) * depth,
     y: (Math.random() - 0.5) * depth,
     z: Math.random() * depth,
-    px: 0,
-    py: 0
   });
 }
 
-// scroll to control speed
-window.addEventListener("wheel", (e) => {
-  speed += e.deltaY * -0.02;
-  speed = Math.max(2, Math.min(1, speed));
-});
-
-// slight mouse-based camera tilt
-let tiltX = 0, tiltY = 0, targetX = 0, targetY = 0;
-window.addEventListener("mousemove", (e) => {
-  targetX = (e.clientX / innerWidth - 0.5) * 0.2;
-  targetY = (e.clientY / innerHeight - 0.5) * 0.2;
-});
+// Mouse movement (desktop only)
+if (!isMobile) {
+  window.addEventListener("mousemove", (e) => {
+    mouseX = (e.clientX - window.innerWidth / 2) / 50;
+    mouseY = (e.clientY - window.innerHeight / 2) / 50;
+  });
+}
 
 function draw() {
-  ctx.fillStyle = "rgba(0,0,0,0.25)";
+  ctx.fillStyle = "rgba(0, 0, 0, 0.2)";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-  const cx = canvas.width / 2;
-  const cy = canvas.height / 2;
-
-  tiltX += (targetX - tiltX) * 0.05;
-  tiltY += (targetY - tiltY) * 0.05;
-
-  for (let s of stars) {
-    s.z -= speed;
-    if (s.z <= 0) {
-      s.z = depth;
-      s.x = (Math.random() - 0.5) * depth;
-      s.y = (Math.random() - 0.5) * depth;
-      s.px = cx;
-      s.py = cy;
+  for (let p of particles) {
+    p.z -= 2; // speed
+    if (p.z <= 0) {
+      p.z = depth;
+      p.x = (Math.random() - 0.5) * depth;
+      p.y = (Math.random() - 0.5) * depth;
     }
 
-    const k = 200 / s.z;
-    const x = s.x * k + cx + tiltX * 200;
-    const y = s.y * k + cy + tiltY * 200;
+    const scale = 300 / p.z;
+    // Apply mouse shift only on desktop
+    const x2d = p.x * scale + canvas.width / 2 + (isMobile ? 0 : mouseX);
+    const y2d = p.y * scale + canvas.height / 2 + (isMobile ? 0 : mouseY);
 
-    // skip stars behind view
-    if (x < 0 || x > canvas.width || y < 0 || y > canvas.height) continue;
+    const size = Math.max(0, 2 - p.z / 400);
+    const brightness = 1 - p.z / depth;
 
-    // brightness + color tint
-    const brightness = 1 - s.z / depth;
-    const r = Math.floor(200 + 55 * brightness);
-    const g = Math.floor(200 + 55 * brightness);
-    const b = Math.floor(255 * brightness);
-
-    // draw motion trail
-    if (s.px !== 0 && s.py !== 0) {
-      ctx.strokeStyle = `rgba(${r},${g},${b},${brightness})`;
-      ctx.lineWidth = 1.2 + brightness * 1.5;
-      ctx.beginPath();
-      ctx.moveTo(x, y);
-      ctx.lineTo(s.px, s.py);
-      ctx.stroke();
-    }
-
-    // store previous position
-    s.px = x;
-    s.py = y;
+    ctx.beginPath();
+    ctx.arc(x2d, y2d, size, 0, Math.PI * 2);
+    ctx.fillStyle = `rgba(255,255,255,${brightness})`;
+    ctx.fill();
   }
-
-  // faint center glow (like ship’s window reflection)
-  const radial = ctx.createRadialGradient(cx, cy, 0, cx, cy, 400);
-  radial.addColorStop(0, "rgba(255,255,255,0.03)");
-  radial.addColorStop(1, "rgba(0,0,0,0)");
-  ctx.fillStyle = radial;
-  ctx.fillRect(0, 0, canvas.width, canvas.height);
 
   requestAnimationFrame(draw);
 }
+
 draw();
-
-
 
 
 
