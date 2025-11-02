@@ -56,7 +56,7 @@ a:hover {
 .intro-container {
   text-align: center;
   color: #fff;
-  font-family: "Poppins", sans-serif;
+  font-family:'Times New Roman', Times, serif;
 }
 
 .intro-ring {
@@ -990,6 +990,7 @@ header {
     padding-bottom: 25px;
   }
 }
+
 
 
 
