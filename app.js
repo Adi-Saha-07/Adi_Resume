@@ -80,7 +80,7 @@ window.addEventListener("load", () => {
   const typeText = document.getElementById("intro-type");
 
   const lines = [
-    "Initializing Adittya’s Portfolio..",
+    "Loading...",
     "Welcome AD-VERSE",
   ];
 
@@ -108,4 +108,5 @@ window.addEventListener("load", () => {
     intro.style.display = "none";
   }
 });
+
 
