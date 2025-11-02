@@ -81,32 +81,43 @@ window.addEventListener("load", () => {
 
   const lines = [
     "Loading...",
-    "Welcome AD-VERSE",
+    "Welcome AD-VERSE"
   ];
 
   let index = 0;
 
-  function showLine() {
+  function typeLine() {
     if (index < lines.length) {
-      typeText.textContent = lines[index];
-      typeText.style.width = "0";
-      typeText.style.animation = "typing 3s steps(40, end) forwards, blink 0.8s infinite";
-      index++;
-      setTimeout(showLine, 4000);
+      const text = lines[index];
+      typeText.textContent = "";
+      typeText.style.width = "0"; 
+      void typeText.offsetWidth; 
+
+      let i = 0;
+      const typingSpeed = 100; 
+
+      const typeChar = setInterval(() => {
+        typeText.textContent += text.charAt(i);
+        i++;
+        if (i === text.length) {
+          clearInterval(typeChar);
+          index++;
+          setTimeout(typeLine, 800); 
+        }
+      }, typingSpeed);
     } else {
+
       setTimeout(() => {
         intro.style.animation = "fadeOutIntro 2s ease forwards";
         setTimeout(() => { intro.style.display = "none"; }, 2000);
-      }, 1500);
+      }, 800);
     }
   }
 
   if (!sessionStorage.getItem("adi_intro_shown")) {
-    setTimeout(showLine, 500);
+    setTimeout(typeLine, 800);
     sessionStorage.setItem("adi_intro_shown", "true");
   } else {
     intro.style.display = "none";
   }
 });
-
-
