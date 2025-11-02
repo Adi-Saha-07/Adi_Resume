@@ -9,6 +9,40 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+//photo pop up 
+document.addEventListener("DOMContentLoaded", () => {
+  const profilePic = document.getElementById("profilePic");
+  const popup = document.getElementById("greetingPopup");
+  const closePopup = document.getElementById("closePopup");
+
+  if (!profilePic || !popup || !closePopup) {
+    console.error("Popup elements missing.");
+    return;
+  }
+
+  // Show popup
+  profilePic.addEventListener("click", () => {
+    popup.style.display = "flex";
+  });
+
+  // Close popup
+  closePopup.addEventListener("click", () => {
+    popup.style.display = "none";
+  });
+
+  // Click outside popup to close
+  popup.addEventListener("click", (e) => {
+    if (e.target === popup) popup.style.display = "none";
+  });
+
+  // Optional: ESC key closes popup
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") popup.style.display = "none";
+  });
+});
+
+
+
 const canvas = document.getElementById("matrixRain");
 const ctx = canvas.getContext("2d");
 
@@ -19,67 +53,98 @@ function resizeCanvas() {
 resizeCanvas();
 window.addEventListener("resize", resizeCanvas);
 
-// Characters to display
-const letters = "アカサタナハマヤラワカキクケコシスセソタチツテトニヌネノ";
+// ===== CONFIG =====
+const stars = [];
+const total = 800;
+const depth = 1200;
+let speed = 1; // ship speed
 
-// Configuration
-const flakes = [];
-const baseFont = 18;
-const maxFlakes = 120;
-
-// Initialize flakes
-for (let i = 0; i < maxFlakes; i++) {
-  flakes.push({
-    x: Math.random() * canvas.width,
-    y: Math.random() * canvas.height,
-    speed: 0.12 + Math.random() * 0.4,
-    char: letters.charAt(Math.floor(Math.random() * letters.length)),
-    size: baseFont + Math.random() * 4,
-    opacity: 0.35 + Math.random() * 0.45,
-    fading: false // new property to control fade
+for (let i = 0; i < total; i++) {
+  stars.push({
+    x: (Math.random() - 0.5) * depth,
+    y: (Math.random() - 0.5) * depth,
+    z: Math.random() * depth,
+    px: 0,
+    py: 0
   });
 }
 
+// scroll to control speed
+window.addEventListener("wheel", (e) => {
+  speed += e.deltaY * -0.02;
+  speed = Math.max(2, Math.min(1, speed));
+});
+
+// slight mouse-based camera tilt
+let tiltX = 0, tiltY = 0, targetX = 0, targetY = 0;
+window.addEventListener("mousemove", (e) => {
+  targetX = (e.clientX / innerWidth - 0.5) * 0.8;
+  targetY = (e.clientY / innerHeight - 0.5) * 0.8;
+});
+
 function draw() {
-  ctx.fillStyle = "rgba(0,0,0,0.18)";
+  ctx.fillStyle = "rgba(0,0,0,0.25)";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-  for (let i = 0; i < flakes.length; i++) {
-    const f = flakes[i];
-   ctx.fillStyle = `rgba(255,255,255, ${f.opacity})`;// soft red color
-    ctx.font = `${f.size}px monospace`;
-    ctx.fillText(f.char, f.x, f.y);
+  const cx = canvas.width / 2;
+  const cy = canvas.height / 2;
 
-    f.y += f.speed;
+  tiltX += (targetX - tiltX) * 0.05;
+  tiltY += (targetY - tiltY) * 0.05;
 
-    const stopY = canvas.height * 0.5;
-
-    // Start fading near the halfway point
-    if (f.y > stopY * 0.9 && !f.fading) {
-      f.fading = true;
+  for (let s of stars) {
+    s.z -= speed;
+    if (s.z <= 0) {
+      s.z = depth;
+      s.x = (Math.random() - 0.5) * depth;
+      s.y = (Math.random() - 0.5) * depth;
+      s.px = cx;
+      s.py = cy;
     }
 
-    // Handle fading animation
-    if (f.fading) {
-      f.opacity -= 0.01; // decrease opacity slowly
-      if (f.opacity <= 0) {
-        // reset once fully faded
-        f.y = -10 - Math.random() * 60;
-        f.x = Math.random() * canvas.width;
-        f.char = letters.charAt(Math.floor(Math.random() * letters.length));
-        f.speed = 0.12 + Math.random() * 0.4;
-        f.size = baseFont + Math.random() * 4;
-        f.opacity = 0.35 + Math.random() * 0.45;
-        f.fading = false;
-      }
+    const k = 200 / s.z;
+    const x = s.x * k + cx + tiltX * 200;
+    const y = s.y * k + cy + tiltY * 200;
+
+    // skip stars behind view
+    if (x < 0 || x > canvas.width || y < 0 || y > canvas.height) continue;
+
+    // brightness + color tint
+    const brightness = 1 - s.z / depth;
+    const r = Math.floor(200 + 55 * brightness);
+    const g = Math.floor(200 + 55 * brightness);
+    const b = Math.floor(255 * brightness);
+
+    // draw motion trail
+    if (s.px !== 0 && s.py !== 0) {
+      ctx.strokeStyle = `rgba(${r},${g},${b},${brightness})`;
+      ctx.lineWidth = 1.2 + brightness * 1.5;
+      ctx.beginPath();
+      ctx.moveTo(x, y);
+      ctx.lineTo(s.px, s.py);
+      ctx.stroke();
     }
+
+    // store previous position
+    s.px = x;
+    s.py = y;
   }
+
+  // faint center glow (like ship’s window reflection)
+  const radial = ctx.createRadialGradient(cx, cy, 0, cx, cy, 400);
+  radial.addColorStop(0, "rgba(255,255,255,0.03)");
+  radial.addColorStop(1, "rgba(0,0,0,0)");
+  ctx.fillStyle = radial;
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
 
   requestAnimationFrame(draw);
 }
+draw();
 
 
-requestAnimationFrame(draw); 
+
+
+
 
 
 
@@ -116,6 +181,16 @@ window.addEventListener("load", () => {
     preloader.style.display = "none";
   }
 });
+
+
+
+
+
+
+
+
+
+
 
 window.addEventListener("load", () => {
   const intro = document.getElementById("intro-popup");
