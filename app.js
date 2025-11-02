@@ -7,41 +7,79 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+
+
 const canvas = document.getElementById("matrixRain");
 const ctx = canvas.getContext("2d");
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+function resizeCanvas() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+}
+resizeCanvas();
+window.addEventListener("resize", resizeCanvas);
 
-const letters = "アカサタナハマヤラワ0123456789カキクケコシスセソタチツテトニヌネノ";
-const fontSize = 16;
-const columns = Math.floor(canvas.width / fontSize);
+// Characters to display
+const letters = "アカサタナハマヤラワカキクケコシスセソタチツテトニヌネノ";
 
-const drops = Array.from({ length: columns }, () => Math.random() * -50);
+// Configuration
+const flakes = [];
+const baseFont = 18;
+const maxFlakes = 120;
 
-function drawMatrix() {
-  ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
-  ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-  ctx.font = `${fontSize}px monospace`;
-
-  for (let i = 0; i < drops.length; i++) {
-    const opacity = Math.random() * 0.8 + 0.2; 
-    ctx.fillStyle = `rgba(255,255,255, ${opacity})`;
-
-    const text = letters.charAt(Math.floor(Math.random() * letters.length));
-    ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-
-    if (drops[i] * fontSize > canvas.height * 0.5 && Math.random() > 0.98) {
-      drops[i] = Math.random() * -20;
-    }
-
-    drops[i] += 0.2;
-  }
+// Initialize flakes
+for (let i = 0; i < maxFlakes; i++) {
+  flakes.push({
+    x: Math.random() * canvas.width,
+    y: Math.random() * canvas.height,
+    speed: 0.12 + Math.random() * 0.4,
+    char: letters.charAt(Math.floor(Math.random() * letters.length)),
+    size: baseFont + Math.random() * 4,
+    opacity: 0.35 + Math.random() * 0.45,
+    fading: false // new property to control fade
+  });
 }
 
-setInterval(drawMatrix, 60);
+function draw() {
+  ctx.fillStyle = "rgba(0,0,0,0.18)";
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
 
+  for (let i = 0; i < flakes.length; i++) {
+    const f = flakes[i];
+   ctx.fillStyle = `rgba(255,255,255, ${f.opacity})`;// soft red color
+    ctx.font = `${f.size}px monospace`;
+    ctx.fillText(f.char, f.x, f.y);
+
+    f.y += f.speed;
+
+    const stopY = canvas.height * 0.5;
+
+    // Start fading near the halfway point
+    if (f.y > stopY * 0.9 && !f.fading) {
+      f.fading = true;
+    }
+
+    // Handle fading animation
+    if (f.fading) {
+      f.opacity -= 0.01; // decrease opacity slowly
+      if (f.opacity <= 0) {
+        // reset once fully faded
+        f.y = -10 - Math.random() * 60;
+        f.x = Math.random() * canvas.width;
+        f.char = letters.charAt(Math.floor(Math.random() * letters.length));
+        f.speed = 0.12 + Math.random() * 0.4;
+        f.size = baseFont + Math.random() * 4;
+        f.opacity = 0.35 + Math.random() * 0.45;
+        f.fading = false;
+      }
+    }
+  }
+
+  requestAnimationFrame(draw);
+}
+
+
+requestAnimationFrame(draw); 
 
 
 
@@ -127,6 +165,4 @@ window.addEventListener("load", () => {
     intro.style.display = "none";
   }
 });
-
-
 
