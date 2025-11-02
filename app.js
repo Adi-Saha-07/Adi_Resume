@@ -42,6 +42,10 @@ function drawMatrix() {
 
 setInterval(drawMatrix, 60);
 
+
+
+
+
 window.addEventListener("resize", () => {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
@@ -84,38 +88,40 @@ window.addEventListener("load", () => {
     "Welcome AD-VERSE"
   ];
 
-  let index = 0;
+  let lineIndex = 0;
+  let charIndex = 0;
 
-  function typeLine() {
-    if (index < lines.length) {
-      const text = lines[index];
-      typeText.textContent = "";
-      typeText.style.width = "0"; 
-      void typeText.offsetWidth; 
+  function typeEffect() {
+    if (lineIndex < lines.length) {
+      const currentLine = lines[lineIndex];
 
-      let i = 0;
-      const typingSpeed = 100; 
+      if (charIndex < currentLine.length) {
+        typeText.textContent += currentLine.charAt(charIndex);
+        charIndex++;
+        setTimeout(typeEffect, 100); 
+      } else {
 
-      const typeChar = setInterval(() => {
-        typeText.textContent += text.charAt(i);
-        i++;
-        if (i === text.length) {
-          clearInterval(typeChar);
-          index++;
-          setTimeout(typeLine, 800); 
+        lineIndex++;
+        charIndex = 0;
+
+        if (lineIndex < lines.length) {
+          setTimeout(() => {
+            typeText.textContent = ""; 
+            typeEffect();
+          }, 1000); 
+        } else {
+
+          setTimeout(() => {
+            intro.style.animation = "fadeOutIntro 2s ease forwards";
+            setTimeout(() => intro.style.display = "none", 2000);
+          }, 1000);
         }
-      }, typingSpeed);
-    } else {
-
-      setTimeout(() => {
-        intro.style.animation = "fadeOutIntro 2s ease forwards";
-        setTimeout(() => { intro.style.display = "none"; }, 2000);
-      }, 800);
+      }
     }
   }
 
   if (!sessionStorage.getItem("adi_intro_shown")) {
-    setTimeout(typeLine, 800);
+    setTimeout(typeEffect, 800);
     sessionStorage.setItem("adi_intro_shown", "true");
   } else {
     intro.style.display = "none";
