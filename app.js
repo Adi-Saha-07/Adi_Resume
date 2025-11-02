@@ -78,8 +78,8 @@ window.addEventListener("wheel", (e) => {
 // slight mouse-based camera tilt
 let tiltX = 0, tiltY = 0, targetX = 0, targetY = 0;
 window.addEventListener("mousemove", (e) => {
-  targetX = (e.clientX / innerWidth - 0.5) * 0.8;
-  targetY = (e.clientY / innerHeight - 0.5) * 0.8;
+  targetX = (e.clientX / innerWidth - 0.5) * 0.2;
+  targetY = (e.clientY / innerHeight - 0.5) * 0.2;
 });
 
 function draw() {
