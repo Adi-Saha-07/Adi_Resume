@@ -75,42 +75,37 @@ window.addEventListener("load", () => {
   }
 });
 
-
 window.addEventListener("load", () => {
   const intro = document.getElementById("intro-popup");
+  const typeText = document.getElementById("intro-type");
 
-  if (sessionStorage.getItem("adi_intro_shown")) {
-    intro.style.display = "none"; // skip intro
-    return;
+  const lines = [
+    "Initializing Adittya’s Portfolio..",
+    "Welcome AD-VERSE",
+  ];
+
+  let index = 0;
+
+  function showLine() {
+    if (index < lines.length) {
+      typeText.textContent = lines[index];
+      typeText.style.width = "0";
+      typeText.style.animation = "typing 3s steps(40, end) forwards, blink 0.8s infinite";
+      index++;
+      setTimeout(showLine, 4000);
+    } else {
+      setTimeout(() => {
+        intro.style.animation = "fadeOutIntro 2s ease forwards";
+        setTimeout(() => { intro.style.display = "none"; }, 2000);
+      }, 1500);
+    }
   }
 
-  setTimeout(() => {
-    intro.style.animation = "introFadeOut 1.5s ease forwards";
-    setTimeout(() => {
-      intro.style.display = "none";
-      // ✅ Mark intro as shown only for this browser session
-      sessionStorage.setItem("adi_intro_shown", "true");
-    }, 1500);
-  }, 5500);
+  if (!sessionStorage.getItem("adi_intro_shown")) {
+    setTimeout(showLine, 500);
+    sessionStorage.setItem("adi_intro_shown", "true");
+  } else {
+    intro.style.display = "none";
+  }
 });
-
-
-// window.addEventListener("load", () => {
-//   const intro = document.getElementById("intro-popup");
-
-//   if (localStorage.getItem("adi_intro_shown")) {
-//     intro.style.display = "none"; // skip intro
-//     return;
-//   }
-
-//   setTimeout(() => {
-//     intro.style.animation = "introFadeOut 1.5s ease forwards";
-//     setTimeout(() => {
-//       intro.style.display = "none";
-
-//       localStorage.setItem("adi_intro_shown", "true");
-//     }, 1500);
-//   }, 5500);
-// });
-
 
