@@ -34,6 +34,88 @@ a:focus, a:active, button:focus, button:active {
 a:hover {
   text-decoration: none;
 }
+
+
+
+
+/* Intro */
+#intro-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, #000000, #0a0a0a 80%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 9999;
+  opacity: 0;
+  animation: introFadeIn 1.2s ease forwards, introFadeOut 1.5s ease 5.5s forwards;
+  overflow: hidden;
+}
+
+.intro-content {
+  text-align: center;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+}
+
+.intro-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlideIn 1.5s ease forwards;
+}
+
+.intro-sub {
+  margin-top: 10px;
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: #a8c0ff;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlideIn 1.5s ease 1s forwards;
+}
+
+.intro-line {
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #00c3ff, #4bffa5);
+  margin: 25px auto 0;
+  border-radius: 5px;
+  animation: lineGrow 2s ease 1.8s forwards;
+}
+
+@keyframes fadeSlideIn {
+  from { opacity: 0; transform: translateY(25px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes lineGrow {
+  0% { width: 0; opacity: 0; }
+  100% { width: 140px; opacity: 1; }
+}
+
+@keyframes introFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes introFadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; visibility: hidden; }
+}
+
+
+
+
+
+
+
 /* Picture of adi */
 /* .photo .adi {
   height: 450px;
@@ -913,5 +995,6 @@ header {
     padding-bottom: 25px;
   }
 }
+
 
 
