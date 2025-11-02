@@ -79,7 +79,7 @@ window.addEventListener("load", () => {
 window.addEventListener("load", () => {
   const intro = document.getElementById("intro-popup");
 
-  if (localStorage.getItem("adi_intro_shown")) {
+  if (sessionStorage.getItem("adi_intro_shown")) {
     intro.style.display = "none"; // skip intro
     return;
   }
@@ -88,9 +88,29 @@ window.addEventListener("load", () => {
     intro.style.animation = "introFadeOut 1.5s ease forwards";
     setTimeout(() => {
       intro.style.display = "none";
-
-      localStorage.setItem("adi_intro_shown", "true");
+      // ✅ Mark intro as shown only for this browser session
+      sessionStorage.setItem("adi_intro_shown", "true");
     }, 1500);
   }, 5500);
 });
+
+
+// window.addEventListener("load", () => {
+//   const intro = document.getElementById("intro-popup");
+
+//   if (localStorage.getItem("adi_intro_shown")) {
+//     intro.style.display = "none"; // skip intro
+//     return;
+//   }
+
+//   setTimeout(() => {
+//     intro.style.animation = "introFadeOut 1.5s ease forwards";
+//     setTimeout(() => {
+//       intro.style.display = "none";
+
+//       localStorage.setItem("adi_intro_shown", "true");
+//     }, 1500);
+//   }, 5500);
+// });
+
 
