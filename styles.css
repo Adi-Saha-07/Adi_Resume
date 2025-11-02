@@ -153,12 +153,14 @@ header {
 }
 
 .left h1 {
+  font-family: 'Times New Roman', Times, serif;
   font-size: 20px;
   font-weight: 700;
   color: #ffffff;
 }
 
 .role {
+  font-family: 'Times New Roman', Times, serif;
   font-size: 16px;
   color: #a3a3a3;
   font-weight: 400;
@@ -171,6 +173,7 @@ header {
 }
 
 .right a {
+  font-family: 'Times New Roman', Times, serif;
   text-decoration: none;
   color: #ffffff;
   font-weight: 500;
@@ -220,6 +223,7 @@ header {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 .left h4 {
+    font-family: 'Times New Roman', Times, serif;
   color: #fff;
 }
 /* ===== Toggle Menu Base ===== */
@@ -294,6 +298,7 @@ header {
 }
 
 .nav-links a {
+  font-family: 'Times New Roman', Times, serif;
   -webkit-tap-highlight-color: transparent;
   outline: none;
 }
@@ -415,7 +420,7 @@ header {
   display: none;
 }
 
-.green { background-color: #64C06A; }
+.green { background-color: #64c06a; }
 .yellow { background-color: #f4b400; }
 .red { background-color: #ff3b30; }
 .cyan { background-color: #7bd6d3; }
@@ -437,7 +442,7 @@ header {
     border-radius: 15px;
     padding: 10px 15px;
     justify-content: flex-start;
-    flex-direction: column;
+    flex-direction: row;
     margin: auto;
     gap: 20px;
     color: #ffffff;
@@ -454,16 +459,22 @@ header {
   }
 
   .btn span {
+    font-family: 'Times New Roman', Times, serif;
     display: inline; /* Show text only on mobile */
     font-size: 20px;
     font-weight: 700;
     color:rgb(255, 255, 255) ;
+    transition: transform 0.3s ease, background-color 0.4s ease;
   }
 
   .btn:hover {
     transform: scale(1.02);
     background-color: #ffffff;
     color: #000;
+  }
+  .btn:hover span {
+    color: #2a2a2a;
+    transform: scale(1.02);
   }
 }
 
@@ -628,6 +639,7 @@ header {
 }
 
 .footer-section h3 {
+  font-family: 'Times New Roman', Times, serif;
   font-size: 18px;
   font-weight: 700;
   margin-bottom: 10px;
@@ -664,6 +676,7 @@ header {
 }
 
 .footer-bottom {
+  font-family: 'Times New Roman', Times, serif;
   border-top: 1px solid #ababab;
   padding-top: 10px;
   text-align: right;
@@ -671,6 +684,9 @@ header {
   color: #ffffff;
 }
 
+.footer-bottom p {
+  font-family: 'Times New Roman', Times, serif;
+}
 /* Responsive for mobile */
 @media (max-width: 700px) {
   .footer {
@@ -684,6 +700,9 @@ header {
 
   .footer-bottom {
     text-align: center;
+  }
+  .footer-bottom p {
+    font-family: 'Times New Roman', Times, serif;
   }
 }
 
@@ -830,13 +849,6 @@ header {
 
 /*index5.html*/
 /* CONTACT SECTION */
-/* .contact-section {
-  background: #000000;
-  padding: 70px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
 
 .contact-container {
   margin-left: 245px;
@@ -980,6 +992,8 @@ header {
 
 
 
+
+
 /*index3.html*/
 .resume-section {
   text-align: center;
@@ -1068,4 +1082,3 @@ header {
     max-width: 90%;
   }
 }
-
