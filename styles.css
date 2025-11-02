@@ -332,12 +332,12 @@ header {
   border-radius: 10px;
   object-fit: cover;
   border: solid rgba(255, 255, 255, 0.952) 2px;
-  /* transition: transform 0.3s ease, background-color 0.4s ease; */
+  transition: transform 0.3s ease, background-color 0.4s ease;
 }
 
-/* .photo img:hover {
-  transform: scale(1.04);
-}  */
+.photo img:hover {
+  transform: scale(1.01);
+} 
 
 .content {
   max-width: 700px;
@@ -601,8 +601,8 @@ header {
 
   .photo img {
     margin: auto;
-    width: 240px;
-    height: 240px;
+    width: 260px;
+    height: 260px;
     border-radius: 500px ;
     transition: transform 0.3s ease, background-color 0.4s ease;
   }
