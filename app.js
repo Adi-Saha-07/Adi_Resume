@@ -85,7 +85,7 @@ window.addEventListener("load", () => {
 
   const lines = [
     "Loading...",
-    "Welcome to Adytron "
+    "Welcome to AdyVerse "
   ];
 
   let lineIndex = 0;
@@ -127,5 +127,6 @@ window.addEventListener("load", () => {
     intro.style.display = "none";
   }
 });
+
 
 
