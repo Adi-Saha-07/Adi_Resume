@@ -74,3 +74,23 @@ window.addEventListener("load", () => {
     preloader.style.display = "none";
   }
 });
+
+
+window.addEventListener("load", () => {
+  const intro = document.getElementById("intro-popup");
+
+  if (localStorage.getItem("adi_intro_shown")) {
+    intro.style.display = "none"; // skip intro
+    return;
+  }
+
+  setTimeout(() => {
+    intro.style.animation = "introFadeOut 1.5s ease forwards";
+    setTimeout(() => {
+      intro.style.display = "none";
+
+      localStorage.setItem("adi_intro_shown", "true");
+    }, 1500);
+  }, 5500);
+});
+
