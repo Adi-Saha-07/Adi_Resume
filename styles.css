@@ -22,6 +22,19 @@ body {
   outline: none;             /* Focus hone par bhi outline na aye */
 }
 
+a, button {
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+a:focus, a:active, button:focus, button:active {
+  outline: none;
+  box-shadow: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
 
 
 /* Intro */
@@ -1121,4 +1134,5 @@ display: none;
 
 
 /*index3.html*/
+
 
