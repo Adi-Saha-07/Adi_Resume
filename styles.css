@@ -1057,7 +1057,7 @@ display: none;
 }
 
 .contact-form{
-  margin-top:17px ;
+  margin-top:50px ;
 }
 
 .contact-form input,
@@ -1114,6 +1114,10 @@ display: none;
     padding-right: 0;
     padding-bottom: 25px;
   }
+  .contact-form{
+  margin-top:20px ;
+}
+
 }
 
 
