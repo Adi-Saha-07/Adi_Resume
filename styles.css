@@ -13,18 +13,13 @@ body {
 /* === Matrix Rain Background === */
 
  
-a, button {
-  outline: none;
-  -webkit-tap-highlight-color: transparent;
+#menuToggle {
+  outline: none;             /* Outline hatata hai */
+  -webkit-tap-highlight-color: transparent; /* Mobile tap blue highlight hatata hai */
 }
 
-a:focus, a:active, button:focus, button:active {
-  outline: none;
-  box-shadow: none;
-}
-
-a:hover {
-  text-decoration: none;
+#menuToggle:focus {
+  outline: none;             /* Focus hone par bhi outline na aye */
 }
 
 
@@ -1126,3 +1121,4 @@ display: none;
 
 
 /*index3.html*/
+
