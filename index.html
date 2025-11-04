@@ -12,8 +12,6 @@
 </head>
 
 <body>
-
-  <canvas id="matrixRain"></canvas>
   <header class="top-header">
   <div class="left">
     <div class="dot"></div>
@@ -34,52 +32,74 @@
   <header>
     <div class="left">
       <a href="index.html">
-      <img src="pic/Adi.jpg" alt="adi"></a>
+      <img src="pic/Adi.png" alt="adi"></a>
       <h4>Adittya Saha<br><span class="role">Software Developer</span></h4>
     </div>
 
     
-    <nav class="nav-links" id="navLinks">
-      <a href="index.html">Home</a>
-      <a href="index2.html">Education</a>
-      <a href="index3.html">Resume</a>
-      <a href="index4.html">Projects</a>
-      <a href="index5.html">Contact</a>
-    </nav>
-    <div class="menu-toggle" id="menuToggle">&#9776;</div>
+    <!-- Add this in your <head> -->
+
+<nav class="nav-links" id="navLinks">
+  <a href="index.html"><i class="fa-solid fa-house"></i> &nbsp; Home</a>
+  <a href="index2.html"><i class="fa-solid fa-graduation-cap"></i>  &nbsp; Education</a>
+  <a href="index3.html"><i class="fa-solid fa-file-lines"></i>  &nbsp; Resume</a>
+  <a href="index4.html"><i class="fa-solid fa-diagram-project"></i>  &nbsp; Projects</a>
+  <a href="index5.html"><i class="fa-solid fa-envelope"></i>  &nbsp; Contact</a>
+</nav>
+
+<div class="menu-toggle" id="menuToggle">&#9776;</div>
+
   </header>
 
   <section class="home">
 
   <div class="photo">
-  <img id="profilePic" src="pic/Adi.jpg" alt="Profile photo">
+  <img id="profilePic" src="pic/Adi.png" alt="Profile photo">
 </div>
 
 <!-- Popup Container -->
 <div id="greetingPopup" class="popup">
   <div class="popup-content">
     <h2 class="glow">Hey I'm Adi</h2>
-    <p>Welcome aboard, traveler.<br> You’ve entered AdyVerse <br>
+    <p>You’ve entered AdyVerse <br>
        Explore about me .</p>
     <button id="closePopup">Close</button>
   </div>
 </div>
 
-
     <div class="content">
-      <h1>Hey I'm Adi</h1>
+      <h1 class="name">Adittya<br>Adi Saha</h1>
+      <h1 class="nm">Adittya Saha</h1>
+      <h3>Software Developer</h3>
+      <div class="know">
+      <a href="index3.html" class="knowmore">Get to know about me >> </a><br><br>
+<a href="File/Adittya's CV.pdf" class="btncv" id="downloadCV" download>Download Resume</a>
+
+<!-- Toast message -->
+<div id="toast" ></div>
+
+      </div>
+
       <h2>Get to know a bit about me</h2>
-      <p>
-        I’m <b>Computer Science</b> Student with a strong foundation
-      in <b>Programming Language</b> & <b>Web development</b> . I also
-      have strong <b>problem solving skills</b> & <b>communication
-      skills.</b> <br><br>
-      As an active influencer and contributor at my university, I love sharing knowledge and collaborating on tech projects.
-      I'm always eager to learn, take on new challenges, and grow both personally and professionally. 
-      My goal is to become a skilled developer and create impactful digital experiences that solve real-world problems.<br><br>
-      </p>
-    
-<div class="buttons">
+ <p>
+  I’m <b>Computer Science</b> Student with a strong foundation
+  in <b>Programming Language</b> & <b>Web development</b> . I also
+  have strong <b>problem solving skills</b> & <b>communication
+  skills.</b>
+</p>
+
+<div id="moreText" class="hidden-text">
+  <p>
+    As an active influencer and contributor at my university, I love sharing knowledge and collaborating on tech projects.
+    I'm always eager to learn, take on new challenges, and grow both personally and professionally. 
+    My goal is to become a skilled developer and create impactful digital experiences that solve real-world problems.
+  </p>
+</div>
+
+<button id="readMoreBtn" class="read-more-btn">Read More</button>
+ 
+
+<!-- <div class="buttons">
    <a href="index2.html" class="btn green">
     <img src="pic/edu.png" alt="Project">
     <span>Education</span>
@@ -99,7 +119,7 @@
     <img src="pic/cont.png" alt="Contact">
     <span>Contact</span>
   </a>
-</div>
+</div> -->
 
 
     </div>
