@@ -79,19 +79,19 @@
       </div>
     </div>
 
-    <form class="contact-form">
-      <div class="form-row">
-        <input type="text" placeholder="First Name *" required>
-        <input type="text" placeholder="Last Name *" required>
-      </div>
-      <div class="form-row">
-        <input type="email" placeholder="Email *" required>
-        <input type="text" placeholder="Subject">
-      </div>
-      <textarea rows="5" placeholder="Message"></textarea>
-      <button type="submit">Send Message</button>
-    </form>
+<form action="https://formspree.io/f/mzzklloe" method="POST" class="contact-form">
+  <div class="form-row">
+    <input type="text" name="First Name" placeholder="First Name *" required>
+    <input type="text" name="Last Name" placeholder="Last Name *" required>
   </div>
+  <div class="form-row">
+    <input type="email" name="Email" placeholder="Email *" required>
+    <input type="text" name="Subject" placeholder="Subject">
+  </div>
+  <textarea name="Message" rows="5" placeholder="Message"></textarea>
+  <button type="submit">Send Message</button>
+</form>
+
 </section>
 
 
