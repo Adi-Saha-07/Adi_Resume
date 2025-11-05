@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-//download CV
 
 
 
@@ -37,7 +36,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
-
 
 
 
@@ -160,4 +158,97 @@ window.addEventListener("load", () => {
   } else {
     intro.style.display = "none";
   }
+});
+
+
+
+///////////////////////////////////
+///////////////////////////////////
+//reveal animation/////////////////
+///////////////////////////////////
+///////////////////////////////////
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Only play intro animation once per load
+  if (sessionStorage.getItem("introPlayed")) {
+    // Animation already played → skip it completely
+    document.querySelectorAll(".photo, .name, .rl, .know")
+      .forEach(el => {
+        el.style.opacity = 1;
+        el.style.transform = "translateY(0)";
+      });
+    return;
+  }
+
+  // First-time load animation
+  const elements = document.querySelectorAll(".photo, .name, .rl, .know, .education-item");
+
+  // Hide initially
+  elements.forEach(el => {
+    el.style.opacity = 0;
+    el.style.transform = "translateY(40px)";
+  });
+
+  // Reveal smoothly, one by one
+  elements.forEach((el, i) => {
+    setTimeout(() => {
+      el.style.transition = "opacity 0.8s ease, transform 0.8s ease";
+      el.style.opacity = 1;
+      el.style.transform = "translateY(0)";
+    }, 300 + i * 200);
+  });
+
+  // Mark that animation has played once
+  sessionStorage.setItem("introPlayed", "true");
+});
+
+
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const skillBtns = document.querySelectorAll(".skill-btn");
+  const skillContents = document.querySelectorAll(".skill-content");
+
+  // Function to show content with animation
+  const showSkillContent = (btn, animate = true) => {
+    // remove previous actives
+    skillBtns.forEach((b) => b.classList.remove("active"));
+    skillContents.forEach((c) => {
+      c.classList.remove("active");
+      c.querySelectorAll("li").forEach((li) => li.classList.remove("show"));
+    });
+
+    // activate current button and its content
+    btn.classList.add("active");
+    const target = document.getElementById(btn.dataset.skill);
+    if (target) {
+      target.classList.add("active");
+
+      // animate only when switching tabs (not on first load)
+      if (animate) {
+        const icons = target.querySelectorAll("li");
+        icons.forEach((li, i) => {
+          setTimeout(() => {
+            li.classList.add("show");
+          }, i * 120);
+        });
+      } else {
+        // show instantly (no animation)
+        target.querySelectorAll("li").forEach((li) => li.classList.add("show"));
+      }
+    }
+  };
+
+  // ✅ On load — show default tab without animation
+  const defaultBtn = document.querySelector(".skill-btn.active") || skillBtns[0];
+  if (defaultBtn) showSkillContent(defaultBtn, false);
+
+  // ✅ On click — switch tab with animation
+  skillBtns.forEach((btn) => {
+    btn.addEventListener("click", () => showSkillContent(btn, true));
+  });
 });
