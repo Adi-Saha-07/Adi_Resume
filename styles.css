@@ -446,7 +446,6 @@ display: none;
   margin: 15px;
   font-size: 32px;
   font-weight: 1000;
-  /* text-trancform: uppercase; */
   color: #232323;
   margin: auto;
   background: none;
@@ -951,14 +950,23 @@ display: none;
 /* ==== Responsive (Mobile) ==== */
 @media (max-width: 768px) {
   .education-item {
+    background: #ffffff1d;
+    padding: 35px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.286);
     flex-direction: column;
     width: 100%;
     text-align: center;
+    transition: transform 0.3s ease;
   }
+
+  .education-item:hover {
+    transform: translateY(-5px);
+  }
+
 .edu-image img {
-  width: 90%;
+  width: 75%;
   height: auto;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
   border-radius: 500px;
   transition: transform 0.3s ease;
 }
@@ -1522,7 +1530,6 @@ section {
   background:  #f4b400;
   color: #232323c8;
 }
-
 }
 
 .reveal {
@@ -1612,9 +1619,9 @@ section {
 }
 
 .tags span {
-  background: linear-gradient(135deg, #5f5f5fc2 , #66666688 ,#44444494);
-  color: #ffffff;
-  border: solid rgba(0, 0, 0, 0.156) 1px ;
+  background:white;
+  color: #3c3c3c;
+  border: solid rgba(0, 0, 0, 0.708) 1px ;
   font-size: 0.8rem;
   padding: 6px 12px;
   border-radius: 20px;
