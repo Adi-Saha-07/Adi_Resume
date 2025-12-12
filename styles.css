@@ -1437,6 +1437,11 @@ section {
   line-height: 1.3;
 }
 
+.cyber {
+  text-decoration: none;
+  color: #0180c4;
+  font-weight: 600;
+}
 
 /* ================= MOBILE RESPONSIVE ================= */
 @media (max-width: 768px) {
@@ -1547,10 +1552,6 @@ section {
 
 
 /*Index4*/
-
-
-
-
 /* ========== PROJECTS SECTION (modern grid layout) ========== */
 .projects-section {
   padding: 90px 8%;
