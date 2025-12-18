@@ -24,7 +24,8 @@
     <a href="index2.html">Education</a>
     <a href="index3.html">Resume</a>
     <a href="index4.html">Projects</a>
-    <a href="index5.html">Contact</a>
+    <a href="Index5.html">Gallery</a>
+    <a href="index6.html">Contact</a>
   </nav>
 
 </header>
@@ -41,58 +42,155 @@
   <a href="index2.html"><i class="fa-solid fa-graduation-cap"></i>  &nbsp; Education</a>
   <a href="index3.html"><i class="fa-solid fa-file-lines"></i>  &nbsp; Resume</a>
   <a href="index4.html"><i class="fa-solid fa-diagram-project"></i>  &nbsp; Projects</a>
-  <a href="index5.html"><i class="fa-solid fa-envelope"></i>  &nbsp; Contact</a>
+  <a href="index5.html"><i class="fa-solid fa-images"></i>  &nbsp; Gallery</a>
+  <a href="index6.html"><i class="fa-solid fa-envelope"></i>  &nbsp; Contact</a>
 </nav>
     <div class="menu-toggle" id="menuToggle">&#9776;</div>
   </header>
 
-  <div class="contact-container">
-    
-    <div class="contact-info">
-      <h2>Contact</h2>
-      <p></p>
+  
+<section class="gallery-section">
+  <h2 class="section-title">Gallery</h2>
 
-      <div class="info-item">
-        <i class="fas fa-phone-alt"></i>
-        <div>
-          <h4>Phone</h4>
-          <p><a href="tel:+918167381643" class="a1">+91 8167381643</a></p>
-          <p><a href="tel:+917864806723" class="a1">+91 7864806723</a></p>
-        </div>
-      </div>
-
-      <div class="info-item">
-        <i class="fas fa-envelope"></i>
-        <div>
-          <h4>Email</h4>
-          <p><a href="mailto:adityaadisaha@gmail.com" class="a1">adityaadisaha@gmail.com</a></p>
-          <p><a href="mailto:8824209033@mail.jaypeeu.ac.in" class="a1">8824209033@mail.jaypeeu.ac.in</a></p>
-        </div>
-      </div>
-
-      <div class="info-item">
-        <i class="fas fa-map-marker-alt"></i>
-        <div>
-          <h4>Address</h4>
-          <p> Delhi-NCR , Uttar Pradesh , India</p>
-        </div>
-      </div>
-    </div>
-
-<form action="https://formspree.io/f/mzzklloe" method="POST" class="contact-form">
-  <div class="form-row">
-    <input type="text" name="First Name" placeholder="First Name *" required>
-    <input type="text" name="Last Name" placeholder="Last Name *" required>
+  <!-- Toggle Buttons -->
+  <div class="gallery-tabs">
+    <button class="gallery-btn active" onclick="showGallery('certificates')">
+      Certificates
+    </button>
+    <button class="gallery-btn" onclick="showGallery('achievements')">
+      Achievements
+    </button>
   </div>
-  <div class="form-row">
-    <input type="email" name="Email" placeholder="Email *" required>
-    <input type="text" name="Subject" placeholder="Subject">
+
+<!-- Certificates -->
+<div id="certificates" class="gallery-content active">
+
+  <div class="certificate-list">
+
+<!-- Certificate 1 (Image Right) -->
+<div class="certificate-item">
+  <div class="certificate-text">
+    <h3>Python Programming</h3>
+    <span class="cert-date"> <b>Issued :</b> <strong>18 <sup>th</sup> December 2025 </strong></span>
+    <p>
+      This certificate confirms the successful completion of the Python Programming course
+      offered by GeeksforGeeks. The course focused on building a strong foundation in Python,
+      covering core concepts such as variables, data types, conditional statements, loops,
+      functions, and basic problem-solving techniques. It emphasized logical thinking,
+      clean coding practices, and the application of Python in real-world programming scenarios.
+    </p>
+    <a href="pic/Certificates/Python.jpg" target="_blank" class="view-btn">
+      View Certificate
+    </a>
   </div>
-  <textarea name="Message" rows="5" placeholder="Message"></textarea>
-  <button type="submit">Send Message</button>
-</form>
+
+  <div class="certificate-image">
+    <img src="pic/Certificates/Python.jpg" alt="Python Programming Certificate">
+  </div>
 </div>
+
+<!-- Certificate 2 (Image Left) -->
+<div class="certificate-item reverse">
+  <div class="certificate-text">
+    <h3>Introduction to Cyber Security</h3>
+    <span class="cert-date"> <b>Issued :</b> <strong>12 <sup>th</sup> December 2025 </strong></span>
+    <p>
+      This certificate represents the successful completion of the “Introduction to Cyber Security”
+      course by Simplilearn SkillUp. The program provided a clear understanding of cyber security
+      fundamentals, including cyber threats, malware, phishing attacks, data protection,
+      and safe online practices. It highlighted the importance of securing digital systems,
+      networks, and personal information in the modern digital era.
+    </p>
+    <a href="pic/Certificates/CyberSecurity.jpg" target="_blank" class="view-btn">
+      View Certificate
+    </a>
+  </div>
+
+  <div class="certificate-image">
+    <img src="pic/Certificates/CyberSecurity.jpg" alt="Cyber Security Certificate">
+  </div>
+</div>
+
+<!-- Certificate 3 (Image Right) -->
+<div class="certificate-item">
+  <div class="certificate-text">
+    <h3>Become an OpenAI ChatGPT Master</h3>
+    <span class="cert-date"> <b>Issued :</b> <strong>18 <sup>th</sup> December 2025 </strong></span>
+    <p>
+      This certification confirms the completion of the “Become an OpenAI ChatGPT Master:
+      Start Earning with AI” course on Udemy. The course focused on understanding the working
+      principles of ChatGPT, prompt engineering techniques, and practical usage of AI tools
+      for content creation, productivity enhancement, and problem-solving. It provided
+      hands-on exposure to real-world applications of generative AI.
+    </p>
+    <a href="pic/Certificates/ChatGPT.jpg" target="_blank" class="view-btn">
+      View Certificate
+    </a>
+  </div>
+
+  <div class="certificate-image">
+    <img src="pic/Certificates/ChatGPT.jpg" alt="ChatGPT Certificate">
+  </div>
+</div>
+
+<!-- Certificate 4 (Image Left) -->
+<div class="certificate-item reverse">
+  <div class="certificate-text">
+    <h3>Critical Thinking in the AI Era </h3>
+    <span class="cert-date"><b>Issued :</b> <strong> 17<sup>th</sup> December 2025 </strong> </span>
+    <p>
+      This certificate acknowledges successful participation in the AI ERA program.
+      The program focused on understanding emerging trends in Artificial Intelligence,
+      its real-world applications, and the growing impact of AI across industries.
+      It encouraged awareness of modern AI technologies, innovation, and future-ready
+      skills required in the evolving tech landscape.
+    </p>
+    <a href="pic/Certificates/AIERA.jpg" target="_blank" class="view-btn">
+      View Certificate
+    </a>
+  </div>
+
+  <div class="certificate-image">
+    <img src="pic/Certificates/AIERA.jpg" alt="AI ERA Certificate">
+  </div>
+</div>
+
+
+  </div>
+</div>
+
+  <!-- Achievements -->
+  <div id="achievements" class="gallery-content">
+    <div class="gallery-grid">
+      <div class="gallery-card">
+        <img src="pic/Achivements/achivment1.jpg" alt="Achievement 1">
+       <h3>Joint Secretary</h3>
+        <span class="cert-date">
+            Programming Hub Rossum, Jaypee University Anoopshahr<br>
+        Delhi NCR, Uttar Pradesh, India
+        </span>
+      <p>
+        Served as Joint Secretary of the Programming Hub Rossum .
+      </p>
+      </div>
+
+      <div class="gallery-card">
+        <img src="pic/Achivements/achivment2.jpg" alt="Achievement 2">
+          <h3>Academic Performance Recognition</h3>
+      <span class="cert-date">JIIT Noida · Academic Session</span>
+      <p>
+        Awarded for notable performance during an academic session at JIIT Noida.
+        This recognition reflects consistent academic effort, active participation,
+        and a strong commitment to learning. It highlights the ability to engage
+        effectively in an educational environment while maintaining discipline
+        and dedication toward academic growth.
+      </p>
+      </div>
+      
+    </div>
+  </div>
 </section>
+
 
 
   <footer class="footer">
