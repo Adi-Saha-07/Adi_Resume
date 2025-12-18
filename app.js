@@ -181,7 +181,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // First-time load animation
-  const elements = document.querySelectorAll(".photo, .name, .rl, .know, .education-item");
+  const elements = document.querySelectorAll(".photo, .name, .rl, .know");
 
   // Hide initially
   elements.forEach(el => {
@@ -252,3 +252,99 @@ document.addEventListener("DOMContentLoaded", () => {
     btn.addEventListener("click", () => showSkillContent(btn, true));
   });
 });
+
+
+
+
+
+
+
+
+
+
+
+const slides = document.querySelector('.slides');
+const slideImages = document.querySelectorAll('.slides img');
+let index = 0;
+
+// Buttons
+document.querySelector('.next').addEventListener('click', () => {
+  index = (index + 1) % slideImages.length;
+  slides.style.transform = `translateX(-${index * 100}%)`;
+});
+document.querySelector('.prev').addEventListener('click', () => {
+  index = (index - 1 + slideImages.length) % slideImages.length;
+  slides.style.transform = `translateX(-${index * 100}%)`;
+});
+
+// Swipe (mobile)
+let startX = 0;
+slides.addEventListener('touchstart', e => startX = e.touches[0].clientX);
+slides.addEventListener('touchend', e => {
+  const endX = e.changedTouches[0].clientX;
+  if (startX - endX > 50) {
+    index = (index + 1) % slideImages.length;
+  } else if (endX - startX > 50) {
+    index = (index - 1 + slideImages.length) % slideImages.length;
+  }
+  slides.style.transform = `translateX(-${index * 100}%)`;
+});
+
+
+
+
+//AI Adi
+document.addEventListener("DOMContentLoaded", function () {
+  const sendBtn = document.getElementById("send-btn");
+  const userInput = document.getElementById("user-input");
+  const chatBox = document.getElementById("chat-box");
+
+  function addMessage(message, sender) {
+    const msgDiv = document.createElement("div");
+    msgDiv.classList.add(sender === "user" ? "user-msg" : "bot-msg");
+    msgDiv.textContent = message;
+    chatBox.appendChild(msgDiv);
+    chatBox.scrollTop = chatBox.scrollHeight;
+  }
+
+  function sendMessage() {
+    const userText = userInput.value.trim();
+    if (userText === "") return;
+
+    addMessage(userText, "user");
+    userInput.value = "";
+
+    // Placeholder bot reply (you can replace this with API call)
+    setTimeout(() => {
+      addMessage("Thinking...", "bot");
+      setTimeout(() => {
+        const botReply = "This is a demo reply. (You can connect your AI API here)";
+        chatBox.lastChild.textContent = botReply;
+      }, 1000);
+    }, 300);
+  }
+
+  sendBtn.addEventListener("click", sendMessage);
+  userInput.addEventListener("keypress", function (e) {
+    if (e.key === "Enter") sendMessage();
+  });
+});
+
+
+
+/* Index 5 Gallery Section*/
+function showGallery(type) {
+  const contents = document.querySelectorAll(".gallery-content");
+  const buttons = document.querySelectorAll(".gallery-btn");
+
+  contents.forEach(c => c.classList.remove("active"));
+  buttons.forEach(b => b.classList.remove("active"));
+
+  document.getElementById(type).classList.add("active");
+
+  if (type === "certificates") {
+    buttons[0].classList.add("active");
+  } else {
+    buttons[1].classList.add("active");
+  }
+}
