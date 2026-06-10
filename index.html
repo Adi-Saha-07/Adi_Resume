@@ -10,22 +10,20 @@
     <link rel="icon" type="image/png" sizes="16x16" href="Pictures/adytab.png">
     <meta name="description"
         content="Personal portfolio of Adittya (Adi) Saha, a passionate AI/ML Engineer and CS student.">
-
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap"
         rel="stylesheet">
-
-    <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="Styles/style.css">
 </head>
 
+<!-- <script src="https://www.goat1000.com/tagcanvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script> -->
+
 <body>
+    
     <div id="scroll-progress"></div>
 
     <!-- Profile Popup -->
@@ -83,18 +81,19 @@
     <main class="main">
 
         <!-- Home Section -->
-        <section class="home section" id="home">
+        <!-- <section class="home section" id="home">
             <div class="container home-container grid">
                 <div class="home-content">
                     <div class="welcome-popup reveal-fade">Hello, World! I am</div>
                     <h1 class="home-title reveal-up">Adittya <span>Saha</span></h1>
-                    <h3 class="home-subtitle reveal-up delay-1">Aspiring AI/ML Engineer & CS Student</h3>
+                    <h3 class="home-subtitle reveal-up delay-1">Aspiring AI/ML Engineer</h3>
                     <p class="home-description reveal-up delay-2">
                         A Computer Science student with strong foundations in programming, web development,
                         problem-solving, and communication skills. I build modern digital experiences.
                     </p>
                     <div class="home-buttons reveal-up delay-3">
-                        <a href="#projects" class="btn btn-primary">View Projects</a>
+                        <a href="#projects" class="btn btn-primary"><i class="fas fa-rocket"></i>
+                    Explore Work</a>
                         <a href="File/Adittya Saha's CV.pdf" download class="btn btn-outline"><i class="fas fa-download"></i>
                             Download Resume</a>
                     </div>
@@ -102,11 +101,106 @@
                 <div class="home-img reveal-scale delay-2">
                     <div class="img-wrapper glassmorphism">
                         <img src="Pictures/ady.png" alt="Adittya Saha Profile" id="profile-img">
-                        <!-- <div class="glow-effect"></div> -->
+                        <div class="glow-effect"></div>
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
+
+
+        <section class="home section" id="home">
+  <div class="hero-bg">
+    <span class="hero-orb orb-1"></span>
+    <span class="hero-orb orb-2"></span>
+    <span class="grid-lines"></span>
+  </div>
+
+  <div class="container home-container">
+    <div class="home-content">
+      <div class="hero-badge reveal-up">
+        <span class="badge-dot"></span>
+        Hello, World! I'm
+      </div>
+
+      <p class="hero-intro reveal-up delay-1"></p>
+
+      <h1 class="home-title reveal-up delay-2">
+        Adittya <span>Saha</span>
+      </h1>
+
+      <h2 class="home-subtitle reveal-up delay-3">
+        Aspiring AI/ML Engineer
+      </h2>
+
+      <p class="home-description reveal-up delay-4">
+        I’m a Computer Science student passionate about AI/ML, Python development,
+        web engineering, and building modern digital products with clean UI and
+        real-world functionality.
+      </p>
+
+      <div class="hero-highlights reveal-up delay-5">
+        <div class="highlight-card">
+          <strong>10+</strong>
+          <span>Projects Built</span>
+        </div>
+        <div class="highlight-card">
+          <strong>AI/ML</strong>
+          <span>Core Focus</span>
+        </div>
+        <div class="highlight-card">
+          <strong>Python • Webdev</strong>
+          <span>Tech Stack</span>
+        </div>
+      </div>
+
+      <div class="home-buttons reveal-up delay-6">
+        <a href="#projects" class="btn btn-primary">
+          <i class="fas fa-rocket"></i>
+          Explore Work
+        </a>
+
+        <a href="Assets/Adittya Saha's CV.pdf" download class="btn btn-outline">
+          <i class="fas fa-download"></i>
+          Download Resume
+        </a>
+      </div>
+
+      <!-- <div class="hero-socials reveal-up delay-6">
+        <a href="https://github.com/Adi-Saha-07" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/adittya-saha-1913622ab?" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="mailto:adityaadisaha07@gmail.com" aria-label="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div> -->
+    </div>
+
+    <div class="home-visual reveal-scale delay-4">
+      <div class="img-wrapper glass-card">
+        <div class="image-ring"></div>
+        <img src="Pictures/ady.png" alt="Adittya Saha Profile" id="profile-img">
+
+        <div class="floating-card card-top">
+          <i class="fas fa-brain"></i>
+          <div>
+            <strong>AI/ML Learner</strong>
+          </div>
+        </div>
+
+        <div class="floating-card card-bottom">
+          <i class="fas fa-code"></i>
+          <div>
+            <strong>Developer</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
         <!-- About Section -->
         <section class="about section" id="about">
@@ -138,6 +232,73 @@
             </div>
         </section>
 
+<section class="stats section">
+
+    <div class="container">
+
+        <div class="stats-heading">
+            <span>MY JOURNEY</span>
+            <h2>Numbers That Define Me</h2>
+            <p>Building skills, projects and experience one step at a time.</p>
+        </div>
+
+        <div class="stats-grid">
+
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-rocket"></i>
+                </div>
+
+                <h2 class="counter" data-target="10">0</h2>
+
+                <p>Projects Built</p>
+
+                <span class="stat-bg">01</span>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+
+                <h2 class="counter" data-target="8.2">0</h2>
+
+                <p>Current CGPA</p>
+
+                <span class="stat-bg">02</span>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-award"></i>
+                </div>
+
+                <h2 class="counter" data-target="4">0</h2>
+
+                <p>Certificates</p>
+
+                <span class="stat-bg">03</span>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+
+                <h2 class="counter" data-target="3">0</h2>
+
+                <p>Years Coding</p>
+
+                <span class="stat-bg">04</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
         <!-- Education Section -->
         <section class="education section" id="education">
             <div class="container">
@@ -153,7 +314,7 @@
                             <ul class="timeline-details">
                                 <li><strong>Specialization:</strong> Computer Science</li>
                                 <li><strong>Current Semester:</strong> 4th</li>
-                                <li><strong>SGPA:</strong> 8.2 | <strong>CGPA:</strong> 8.0</li>
+                                <li><strong>SGPA:</strong> 9.1 | <strong>CGPA:</strong> 8.2 </li>
                                 <li><strong>Location:</strong> Anoopshahr, Bulandshahr, UP</li>
                             </ul>
                         </div>
@@ -193,80 +354,47 @@
         </section>
 
         <!-- Skills Section -->
-        <section class="skills section" id="skills">
-            <div class="container">
-                <h2 class="section-title reveal-up">My <span>Skills</span></h2>
-                <div class="skills-container glass-card reveal-up delay-1">
-                    <div class="skills-tabs">
-                        <button class="skills-tab active" data-target="#frontend">Frontend Development</button>
-                        <button class="skills-tab" data-target="#backend">Programming Languages</button>
-                        <button class="skills-tab" data-target="#ML">ML Libraries</button>
-                        <button class="skills-tab" data-target="#database">Database</button>
-                        <button class="skills-tab" data-target="#tools">Tools/Platforms</button>
-                        <button class="skills-tab" data-target="#AI">AI Tools</button>
-                        <button class="skills-tab" data-target="#other">Other</button>
-                        <button class="skills-tab" data-target="#languages">Languages</button>
-                    </div>
-
-                    <div class="skills-content">
-                        <!-- Frontend -->
-                        <div class="skills-group active" id="frontend">
-                            <div class="skill-item"><i class="fab fa-html5 skill-icon"></i> HTML5</div>
-                            <div class="skill-item"><i class="fab fa-css3-alt skill-icon"></i> CSS3</div>
-                            <div class="skill-item"><i class="fab fa-js skill-icon"></i> JavaScript</div>
-                            <div class="skill-item"><i class="fas fa-cloud-upload-alt skill-icon"></i> Vercel</div>
-                        </div>
-                        <!-- Programming -->
-                        <div class="skills-group" id="backend">
-                            <div class="skill-item"><i class="fab fa-python skill-icon"></i> Python</div>
-                            <div class="skill-item"><i class="fas fa-laptop-code  skill-icon"></i> C++</div>
-                            <div class="skill-item"><i class="fas fa-c skill-icon"></i> C</div>
-                            <div class="skill-item"><i class="fas fa-chart-area skill-icon"></i>R</div>
-                        </div>
-                        <!-- ML Libs -->
-                        <div class="skills-group" id="ML">
-                            <div class="skill-item"><i class="fab fa-python skill-icon"></i> NumPy </div>
-                            <div class="skill-item"><i class="fas fa-table skill-icon"></i> Pandas </div>
-                            <div class="skill-item"><i class="fas fa-chart-line skill-icon"></i> Matplotlib </div>
-                            <div class="skill-item"><i class="fas fa-chart-bar skill-icon"></i> Seaborn </div>
-                        </div>
-                        <!-- Database -->
-                        <div class="skills-group" id="database">
-                            <div class="skill-item"><i class="fas fa-database skill-icon"></i> MySQL</div>
-                            <div class="skill-item"><i class="fas fa-file-excel skill-icon"></i> MS-Excel</div>
-                        </div>
-                        <!-- Tools -->
-                        <div class="skills-group" id="tools">
-                            <div class="skill-item"><i class="fas fa-laptop-code skill-icon"></i> VS Code</div>
-                            <div class="skill-item"><i class="fas fa-rocket skill-icon"></i> Antigravity</div>
-                            <div class="skill-item"><i class="fab fa-github skill-icon"></i> GitHub</div>    
-                            <div class="skill-item"><i class="fas fa-cloud-upload-alt skill-icon"></i> Vercel</div>
-                            <div class="skill-item"><i class="fas fa-palette skill-icon"></i> Canva</div>
-                        </div>
-                        <!-- AI Tools -->
-                        <div class="skills-group" id="AI">
-                            <div class="skill-item"><i class="fas fa-robot skill-icon"></i> ChatGPT</div>
-                            <div class="skill-item"><i class="fas fa-brain skill-icon"></i> Gemini </div>
-                            <div class="skill-item"><i class="fas fa-microchip skill-icon"></i> Claude </div>    
-                            <div class="skill-item"><i class="fas fa-search skill-icon"></i> Perplexity </div>
-                        </div>
-                        <!-- Other -->
-                        <div class="skills-group" id="other">
-                            <div class="skill-item"><i class="fas fa-puzzle-piece skill-icon"></i> Problem Solving</div>
-                            <div class="skill-item"><i class="fas fa-object-group skill-icon"></i> UI/UX Design</div>
-                            <div class="skill-item"><i class="fas fa-network-wired skill-icon"></i> API Integration
-                            </div>
-                        </div>
-                        <!-- Languages -->
-                        <div class="skills-group" id="languages">
-                            <div class="skill-item"><i class="fas fa-book-open skill-icon"></i> Bengali</div>
-                            <div class="skill-item"><i class="fas fa-globe skill-icon"></i> English</div>
-                            <div class="skill-item"><i class="fas fa-comments skill-icon"></i> Hindi</div>
-                        </div>
-                    </div>
+<section class="skills section" id="skills">
+    <div class="container">
+        <h2 class="section-title reveal-up">My <span>Skills</span></h2>
+        <div class="skills-container glass-card reveal-up delay-1">
+            <div class="sphere-container">
+                <canvas id="skillCanvas" width="500" height="500">
+                    Your browser does not support canvas.
+                </canvas>
+                <div id="tags">
+                    <ul>
+                        <li><a href="#">HTML5</a></li>
+                        <li><a href="#">CSS3</a></li>
+                        <li><a href="#">JavaScript</a></li>
+                        <li><a href="#">Python</a></li>
+                        <li><a href="#">C</a></li>
+                        <li><a href="#">C++</a></li>
+                        <li><a href="#">R</a></li>
+                        <li><a href="#">React</a></li>
+                        <li><a href="#">NumPy</a></li>
+                        <li><a href="#">Pandas</a></li>
+                        <li><a href="#">Matplotlib</a></li>
+                        <li><a href="#">Seaborn</a></li>
+                        <li><a href="#">MySQL</a></li>
+                        <li><a href="#">GitHub</a></li>
+                        <li><a href="#">VS Code</a></li>
+                        <li><a href="#">Vercel</a></li>
+                        <li><a href="#">ChatGPT</a></li>
+                        <li><a href="#">Gemini</a></li>
+                        <li><a href="#">Claude</a></li>
+                        <li><a href="#">Perplexity</a></li>
+                        <li><a href="#">AI</a></li>
+                        <li><a href="#">Machine Learning</a></li>
+                        <li><a href="#">Problem Solving</a></li>
+                        <li><a href="#">API Integration</a></li>
+                        <li><a href="#">UI/UX Design</a></li>
+                    </ul>
                 </div>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
 
         <!-- Projects Section -->
         <section class="projects section" id="projects">
@@ -447,14 +575,14 @@
                             <div class="contact-item">
                                 <i class="fas fa-phone-alt contact-icon"></i>
                                 <div>
-                                    <span><a href="tel:+918167381643" class="a1">+91 XXXXXXXX43</a></span><br>
-                                    <span><a href="tel:+917864806723" class="a1">+91 XXXXXXXX23</a></span>
+                                    <span><a href="tel:+918167381643" class="a1">+91 8167381643</a></span><br>
+                                    <span><a href="tel:+917864806723" class="a1">+91 7864806723</a></span>
                                 </div>
                             </div>
                             <div class="contact-item">
                                 <i class="fas fa-envelope contact-icon"></i>
                                 <div>
-                                    <span><a href="mailto:adityaadisaha@gmail.com" class="a1"> XXXXXXXXXXXXX07@gmail.com</a></span><br>
+                                    <span><a href="mailto:adityaadisaha@gmail.com" class="a1">adityaadisaha@gmail.com</a></span><br>
                                     <span><a href="mailto:8824209033@mail.jaypeeu.ac.in" class="a1">8824209033@mail.jaypeeu.ac.in</a></span>
                                 </div>
                             </div>
@@ -511,7 +639,7 @@
                 <a href="#" class="footer-logo">Ady<span>Verse</span></a>
                 <!-- <p class="footer-desc">Crafting digital experiences with modern web technologies.</p> -->
             </div>
-            <p class="footer-copy">&#169; <span id="year"></span> Adittya Saha </p>
+            <p class="footer-copy">&#169; <span id="year"></span> Adittya Saha. All rights reserved.</p>
         </div>
     </footer>
 
