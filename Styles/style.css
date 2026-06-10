@@ -7,21 +7,6 @@
     font-family: 'Outfit', Arial, sans-serif;
 }
 
-html{
-  visibility:hidden;
-  opacity:0;
-}
-
-html.loaded{
-  visibility:visible;
-  opacity:1;
-}
-
-body{
-    overflow-x:hidden;
-}
-
-
 /* --- CSS Variables & Theme --- */
 :root {
     /* Colors */
