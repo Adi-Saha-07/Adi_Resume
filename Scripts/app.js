@@ -1,6 +1,160 @@
 /* =========================================
    AdyVerse Portfolio JavaScript
    ========================================= */
+//Home
+document.addEventListener("DOMContentLoaded", () => {
+  const reveals = document.querySelectorAll(".reveal-up, .reveal-scale, .reveal-fade");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active");
+      }
+    });
+  }, { threshold: 0.18 });
+
+  reveals.forEach((el) => observer.observe(el));
+
+  const profileImg = document.getElementById("profile-img");
+  const wrapper = document.querySelector(".glass-card");
+
+  if (profileImg && wrapper && window.innerWidth > 992) {
+    wrapper.addEventListener("mousemove", (e) => {
+      const rect = wrapper.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      const rotateY = ((x / rect.width) - 0.5) * 10;
+      const rotateX = ((y / rect.height) - 0.5) * -10;
+
+      profileImg.style.transform = `scale(1.03) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+    });
+
+    wrapper.addEventListener("mouseleave", () => {
+      profileImg.style.transform = "scale(1) rotateX(0deg) rotateY(0deg)";
+    });
+  }
+});
+
+
+
+/* ==========================
+   COUNT UP ANIMATION
+========================== */
+
+const counters = document.querySelectorAll(".counter");
+
+const startCounters = () => {
+
+    counters.forEach(counter => {
+
+        const target = +counter.getAttribute("data-target");
+
+        let count = 0;
+
+        const speed = target / 60;
+
+        const updateCount = () => {
+
+            if(count < target){
+
+                count += speed;
+
+                if(target === 8){
+                    counter.innerText = count.toFixed(1);
+                }else{
+                    counter.innerText = Math.ceil(count);
+                }
+
+                requestAnimationFrame(updateCount);
+
+            }else{
+
+                if(target === 8){
+                    counter.innerText = "8.0";
+                }else{
+                    counter.innerText = target + "+";
+                }
+
+            }
+
+        };
+
+        updateCount();
+
+    });
+
+};
+
+const statsSection = document.querySelector(".stats");
+
+const observer = new IntersectionObserver(entries => {
+
+    if(entries[0].isIntersecting){
+
+        startCounters();
+
+        observer.disconnect();
+
+    }
+
+}, { threshold: 0.4 });
+
+observer.observe(statsSection);
+
+
+//skill gloabe effect
+window.addEventListener("load", () => {
+
+    if (!window.TagCanvas) return;
+
+    try {
+
+        TagCanvas.Start("skillCanvas", "tags", {
+
+            textColour: "#ffffff",
+            textHeight: 24,
+
+            outlineColour: "transparent",
+
+            shadow: "#ff2b2b",
+            shadowBlur: 10,
+
+            depth: 0.8,
+
+            zoom: 1,
+
+            // Right → Left slow rotation
+            reverse: true,
+            initial: [0.08, 0],
+
+            maxSpeed: 0.02,
+            minSpeed: 0.01,
+
+            freezeActive: false,
+            freezeDecel: false,
+
+            decel: 1,
+
+            wheelZoom: false,
+            dragControl: false,
+
+            shuffleTags: false,
+
+            fadeIn: 1000,
+
+            noSelect: true
+
+        });
+
+    } catch (e) {
+
+        console.error(e);
+
+    }
+
+});
+
 
 //scroll bar
 window.addEventListener("scroll", () => {
@@ -53,7 +207,7 @@ function hidePreloader() {
         
         // Trigger initial reveal animations after preloader
         reveal();
-    }, 1000); // Reduced to 1 second for a snappier load
+    }, 2000); // Reduced to 1 second for a snappier load
 }
 
 if (document.readyState === 'complete' || document.readyState === 'interactive') {
@@ -177,3 +331,8 @@ const yearSpan = document.getElementById('year');
 if(yearSpan) {
     yearSpan.textContent = new Date().getFullYear();
 }
+
+
+window.addEventListener("load", () => {
+   document.documentElement.classList.add("loaded");
+});
