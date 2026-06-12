@@ -405,14 +405,14 @@ img {
 
 /* --- Navigation --- */
 
-.nav-toggle{
+.nav-toggle {
     transition:
-        transform 180ms cubic-bezier(.34,1.56,.64,1),
+        transform 180ms cubic-bezier(.34, 1.56, .64, 1),
         background .3s ease;
 }
 
-.nav-toggle:active{
-    transform:scale(.82);
+.nav-toggle:active {
+    transform: scale(.82);
 }
 
 .header {
@@ -563,12 +563,12 @@ img {
    HERO BADGE SHINE EFFECT
 ================================== */
 
-.hero-badge{
+.hero-badge {
     position: relative;
     overflow: hidden;
 }
 
-.hero-badge::after{
+.hero-badge::after {
     content: '';
     position: absolute;
     top: 0;
@@ -577,19 +577,17 @@ img {
     width: 100%;
     height: 100%;
 
-    background: linear-gradient(
-        90deg,
-        transparent,
-        rgba(255,255,255,.18),
-        transparent
-    );
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, .18),
+            transparent);
 
     transition: .8s ease;
 
     pointer-events: none;
 }
 
-.hero-badge:hover::after{
+.hero-badge:hover::after {
     left: 100%;
 }
 
@@ -700,12 +698,12 @@ img {
    HIGHLIGHT CARD SHINE EFFECT
 ================================== */
 
-#home .highlight-card{
+#home .highlight-card {
     position: relative;
     overflow: hidden;
 }
 
-#home .highlight-card::after{
+#home .highlight-card::after {
     content: '';
     position: absolute;
     top: 0;
@@ -714,17 +712,15 @@ img {
     width: 100%;
     height: 100%;
 
-    background: linear-gradient(
-        90deg,
-        transparent,
-        rgba(255,255,255,.15),
-        transparent
-    );
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, .15),
+            transparent);
 
     transition: .7s ease;
 }
 
-#home .highlight-card:hover::after{
+#home .highlight-card:hover::after {
     left: 100%;
 }
 
@@ -894,12 +890,12 @@ img {
    FLOATING CARDS SHINE EFFECT
 ================================== */
 
-.floating-card{
+.floating-card {
     position: relative;
     overflow: hidden;
 }
 
-.floating-card::after{
+.floating-card::after {
     content: '';
     position: absolute;
     top: 0;
@@ -908,19 +904,17 @@ img {
     width: 100%;
     height: 100%;
 
-    background: linear-gradient(
-        90deg,
-        transparent,
-        rgba(255,255,255,.18),
-        transparent
-    );
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, .18),
+            transparent);
 
     transition: .8s ease;
 
     pointer-events: none;
 }
 
-.floating-card:hover::after{
+.floating-card:hover::after {
     left: 100%;
 }
 
@@ -1004,9 +998,9 @@ img {
     }
 }
 
-@media (max-width:768px){
+@media (max-width:768px) {
 
-    #home .floating-card{
+    #home .floating-card {
         position: static;
         width: 100%;
         max-width: 100%;
@@ -1014,7 +1008,7 @@ img {
     }
 
     #home .card-top,
-    #home .card-bottom{
+    #home .card-bottom {
         left: auto;
         right: auto;
         top: auto;
@@ -1027,12 +1021,12 @@ img {
    HERO BUTTON SHINE EFFECT
 ================================== */
 
-#home .btn{
+#home .btn {
     position: relative;
     overflow: hidden;
 }
 
-#home .btn::before{
+#home .btn::before {
     content: '';
     position: absolute;
     top: 0;
@@ -1041,17 +1035,15 @@ img {
     width: 100%;
     height: 100%;
 
-    background: linear-gradient(
-        90deg,
-        transparent,
-        rgba(255,255,255,.25),
-        transparent
-    );
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, .25),
+            transparent);
 
     transition: .6s;
 }
 
-#home .btn:hover::before{
+#home .btn:hover::before {
     left: 100%;
 }
 
@@ -1186,12 +1178,12 @@ img {
    ABOUT SECTION SHINE EFFECT
 ================================== */
 
-#about .glass-card{
+#about .glass-card {
     position: relative;
     overflow: hidden;
 }
 
-#about .glass-card::after{
+#about .glass-card::after {
     content: '';
     position: absolute;
     top: 0;
@@ -1200,19 +1192,17 @@ img {
     width: 100%;
     height: 100%;
 
-    background: linear-gradient(
-        90deg,
-        transparent,
-        rgba(255,255,255,.12),
-        transparent
-    );
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, .12),
+            transparent);
 
     transition: .8s ease;
 
     pointer-events: none;
 }
 
-#about .glass-card:hover::after{
+#about .glass-card:hover::after {
     left: 100%;
 }
 
@@ -1220,37 +1210,35 @@ img {
    ABOUT SECTION PREMIUM BORDER
 ================================== */
 
-#about .glass-card::before{
-    content:'';
-    position:absolute;
-    inset:0;
-    border-radius:16px;
+#about .glass-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 16px;
 
-    border:1px solid transparent;
+    border: 1px solid transparent;
 
     background:
-    linear-gradient(
-        135deg,
-        rgba(255,43,43,.4),
-        transparent,
-        rgba(255,43,43,.4)
-    ) border-box;
+        linear-gradient(135deg,
+            rgba(255, 43, 43, .4),
+            transparent,
+            rgba(255, 43, 43, .4)) border-box;
 
     -webkit-mask:
         linear-gradient(#fff 0 0) padding-box,
         linear-gradient(#fff 0 0);
 
-    -webkit-mask-composite:xor;
-    mask-composite:exclude;
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
 
-    opacity:0;
-    transition:.5s;
+    opacity: 0;
+    transition: .5s;
 
-    pointer-events:none;
+    pointer-events: none;
 }
 
-#about .glass-card:hover::before{
-    opacity:1;
+#about .glass-card:hover::before {
+    opacity: 1;
 }
 
 
@@ -1363,12 +1351,12 @@ img {
    JOURNEY CARD SHINE EFFECT
 ================================== */
 
-#journey .stat-card{
+#journey .stat-card {
     position: relative;
     overflow: hidden;
 }
 
-#journey .stat-card::after{
+#journey .stat-card::after {
     content: '';
     position: absolute;
     top: 0;
@@ -1377,19 +1365,17 @@ img {
     width: 100%;
     height: 100%;
 
-    background: linear-gradient(
-        90deg,
-        transparent,
-        rgba(255,255,255,.12),
-        transparent
-    );
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, .12),
+            transparent);
 
     transition: .8s ease;
 
     pointer-events: none;
 }
 
-#journey .stat-card:hover::after{
+#journey .stat-card:hover::after {
     left: 100%;
 }
 
@@ -1488,12 +1474,12 @@ img {
    EDUCATION CARD SHINE EFFECT
 ================================== */
 
-#education .timeline-content{
+#education .timeline-content {
     position: relative;
     overflow: hidden;
 }
 
-#education .timeline-content::after{
+#education .timeline-content::after {
     content: '';
     position: absolute;
     top: 0;
@@ -1502,19 +1488,17 @@ img {
     width: 100%;
     height: 100%;
 
-    background: linear-gradient(
-        90deg,
-        transparent,
-        rgba(255,255,255,.12),
-        transparent
-    );
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, .12),
+            transparent);
 
     transition: .8s ease;
 
     pointer-events: none;
 }
 
-#education .timeline-content:hover::after{
+#education .timeline-content:hover::after {
     left: 100%;
 }
 
@@ -1522,37 +1506,35 @@ img {
    EDUCATION PREMIUM BORDER GLOW
 ================================== */
 
-#education .timeline-content::before{
-    content:'';
-    position:absolute;
-    inset:0;
-    border-radius:16px;
+#education .timeline-content::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 16px;
 
-    border:1px solid transparent;
+    border: 1px solid transparent;
 
     background:
-    linear-gradient(
-        135deg,
-        rgba(255,43,43,.4),
-        transparent,
-        rgba(255,43,43,.4)
-    ) border-box;
+        linear-gradient(135deg,
+            rgba(255, 43, 43, .4),
+            transparent,
+            rgba(255, 43, 43, .4)) border-box;
 
     -webkit-mask:
         linear-gradient(#fff 0 0) padding-box,
         linear-gradient(#fff 0 0);
 
-    -webkit-mask-composite:xor;
-    mask-composite:exclude;
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
 
-    opacity:0;
-    transition:.5s;
+    opacity: 0;
+    transition: .5s;
 
-    pointer-events:none;
+    pointer-events: none;
 }
 
-#education .timeline-content:hover::before{
-    opacity:1;
+#education .timeline-content:hover::before {
+    opacity: 1;
 }
 
 
@@ -1594,15 +1576,15 @@ img {
 }
 
 
-@media (max-width:768px){
+@media (max-width:768px) {
 
-    #skillCanvas{
-        width:100%;
-        height:300px;
+    #skillCanvas {
+        width: 100%;
+        height: 300px;
     }
 
-    .sphere-container{
-        min-height:320px;
+    .sphere-container {
+        min-height: 320px;
     }
 
 }
@@ -1923,12 +1905,10 @@ img {
     border-radius: 20px;
     border: 1px solid transparent;
     background:
-        linear-gradient(
-            135deg,
+        linear-gradient(135deg,
             rgba(255, 43, 43, .4),
             transparent,
-            rgba(255, 43, 43, .4)
-        ) border-box;
+            rgba(255, 43, 43, .4)) border-box;
 
     -webkit-mask:
         linear-gradient(#fff 0 0) padding-box,
@@ -1939,7 +1919,8 @@ img {
     opacity: 0;
     transition: .5s;
 
-    pointer-events: none; /* IMPORTANT */
+    pointer-events: none;
+    /* IMPORTANT */
 }
 
 .project-card:hover::after {
@@ -1953,211 +1934,206 @@ img {
    CERTIFICATES
 ================================== */
 
-.gallery-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-    gap:30px;
-    margin-top:40px;
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
 }
 
-.certificate-card{
-    padding:18px;
-    border-radius:24px;
-    transition:.4s ease;
+.certificate-card {
+    padding: 18px;
+    width: 100%;
+    border-radius: 24px;
+    transition: .4s ease;
 }
 
-.certificate-card:hover{
-    transform:translateY(-10px);
+.certificate-card:hover {
+    transform: translateY(-10px);
 
     box-shadow:
-    0 20px 40px rgba(255,43,43,.12);
+        0 20px 40px rgba(255, 43, 43, .12);
 }
 
-.certificate-image{
-    height:280px;
+.certificate-image {
+    height: 280px;
 
-    background:#0f0f0f;
+    background: #0f0f0f;
 
-    border-radius:16px;
+    border-radius: 16px;
 
-    overflow:hidden;
+    overflow: hidden;
 
-    display:flex;
-    align-items:center;
-    justify-content:center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.certificate-image img{
+.certificate-image img {
 
-    width:100%;
-    height:100%;
+    width: 100%;
+    height: 100%;
 
-    object-fit:contain;
+    object-fit: contain;
 
-    transition:.4s ease;
+    transition: .4s ease;
 
-    background:white;
+    background: white;
 }
 
-.certificate-card:hover img{
-    transform:scale(1.03);
+.certificate-card:hover img {
+    transform: scale(1.03);
 }
 
-.certificate-content{
-    padding-top:20px;
-    text-align:center;
+.certificate-content {
+    padding-top: 20px;
+    text-align: center;
 }
 
-.certificate-content h4{
-    color:#fff;
+.certificate-content h4 {
+    color: #fff;
 
-    font-size:1.15rem;
+    font-size: 1.15rem;
 
-    margin-bottom:10px;
+    margin-bottom: 10px;
 
-    min-height:50px;
+    min-height: 50px;
 }
 
-.certificate-provider{
+.certificate-provider {
 
-    color:#ff2b2b;
+    color: #ff2b2b;
 
-    font-weight:600;
+    font-weight: 600;
 
-    margin-bottom:8px;
+    margin-bottom: 8px;
 }
 
-.certificate-date{
+.certificate-date {
 
-    display:block;
+    display: block;
 
-    color:#bdbdbd;
+    color: #bdbdbd;
 
-    margin-bottom:20px;
+    margin-bottom: 20px;
 
-    font-size:.9rem;
+    font-size: .9rem;
 }
 
-.certificate-btn{
+.certificate-btn {
 
-    width:100%;
+    width: 100%;
 
-    display:flex;
+    display: flex;
 
-    justify-content:center;
-    align-items:center;
+    justify-content: center;
+    align-items: center;
 
-    gap:10px;
+    gap: 10px;
 
-    padding:13px;
+    padding: 13px;
 
-    border-radius:12px;
+    border-radius: 12px;
 
-    text-decoration:none;
+    text-decoration: none;
 
-    color:white;
+    color: white;
 
-    font-weight:600;
+    font-weight: 600;
 
     background:
-    linear-gradient(
-        135deg,
-        #ff2b2b,
-        #b30000
-    );
+        linear-gradient(135deg,
+            #ff2b2b,
+            #b30000);
 
-    transition:.3s ease;
+    transition: .3s ease;
 }
 
-.certificate-btn:hover{
+.certificate-btn:hover {
 
-    transform:translateY(-3px);
+    transform: translateY(-3px);
 
     box-shadow:
-    0 10px 20px rgba(255,43,43,.25);
+        0 10px 20px rgba(255, 43, 43, .25);
 }
 
 /* ==================================
    PREMIUM BUTTON EFFECT
 ================================== */
 
-.certificate-btn{
-    position:relative;
-    overflow:hidden;
+.certificate-btn {
+    position: relative;
+    overflow: hidden;
 }
 
-.certificate-btn::before{
-    content:'';
-    position:absolute;
-    top:0;
-    left:-100%;
-    width:100%;
-    height:100%;
+.certificate-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
 
-    background:linear-gradient(
-        90deg,
-        transparent,
-        rgba(255,255,255,.25),
-        transparent
-    );
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, .25),
+            transparent);
 
-    transition:.6s;
+    transition: .6s;
 }
 
-.certificate-btn:hover::before{
-    left:100%;
+.certificate-btn:hover::before {
+    left: 100%;
 }
 
 /* ==================================
    PREMIUM CARD BORDER GLOW
 ================================== */
 
-.certificate-card{
-    position:relative;
-    overflow:hidden;
+.certificate-card {
+    position: relative;
+    overflow: hidden;
 }
 
-.certificate-card::after{
-    content:'';
-    position:absolute;
-    inset:0;
-    border-radius:24px;
+.certificate-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 24px;
 
-    border:1px solid transparent;
+    border: 1px solid transparent;
 
     background:
-    linear-gradient(
-        135deg,
-        rgba(255,43,43,.4),
-        transparent,
-        rgba(255,43,43,.4)
-    ) border-box;
+        linear-gradient(135deg,
+            rgba(255, 43, 43, .4),
+            transparent,
+            rgba(255, 43, 43, .4)) border-box;
 
     -webkit-mask:
         linear-gradient(#fff 0 0) padding-box,
         linear-gradient(#fff 0 0);
 
-    -webkit-mask-composite:xor;
-    mask-composite:exclude;
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
 
-    opacity:0;
-    transition:.5s;
+    opacity: 0;
+    transition: .5s;
 
-    pointer-events:none;
+    pointer-events: none;
 }
 
-.certificate-card:hover::after{
-    opacity:1;
+.certificate-card:hover::after {
+    opacity: 1;
 }
 
 /* ====================
    TABLET
 ==================== */
 
-@media(max-width:992px){
+@media(max-width:992px) {
 
-    .gallery-grid{
-        grid-template-columns:repeat(2,1fr);
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 
 }
@@ -2165,15 +2141,36 @@ img {
 /* ====================
    MOBILE
 ==================== */
+@media (max-width:768px) {
 
-@media(max-width:768px){
-
-    .gallery-grid{
-        grid-template-columns:1fr;
+    .gallery-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px;
     }
 
-    .certificate-image{
-        height:240px;
+    #gallery .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .certificate-card {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .certificate-image img {
+        max-width: 100%;
+    }
+}
+
+@media(max-width:768px) {
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .certificate-image {
+        height: 240px;
     }
 
 }
@@ -2251,12 +2248,12 @@ img {
    ACHIEVEMENT CARD SHINE EFFECT
 ================================== */
 
-.achievement-item{
+.achievement-item {
     position: relative;
     overflow: hidden;
 }
 
-.achievement-item::after{
+.achievement-item::after {
     content: '';
     position: absolute;
     top: 0;
@@ -2265,19 +2262,17 @@ img {
     width: 100%;
     height: 100%;
 
-    background: linear-gradient(
-        90deg,
-        transparent,
-        rgba(255,255,255,.12),
-        transparent
-    );
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, .12),
+            transparent);
 
     transition: .8s ease;
 
     pointer-events: none;
 }
 
-.achievement-item:hover::after{
+.achievement-item:hover::after {
     left: 100%;
 }
 
@@ -2285,37 +2280,35 @@ img {
    ACHIEVEMENT PREMIUM BORDER GLOW
 ================================== */
 
-.achievement-item::before{
-    content:'';
-    position:absolute;
-    inset:0;
-    border-radius:16px;
+.achievement-item::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 16px;
 
-    border:1px solid transparent;
+    border: 1px solid transparent;
 
     background:
-    linear-gradient(
-        135deg,
-        rgba(255,43,43,.4),
-        transparent,
-        rgba(255,43,43,.4)
-    ) border-box;
+        linear-gradient(135deg,
+            rgba(255, 43, 43, .4),
+            transparent,
+            rgba(255, 43, 43, .4)) border-box;
 
     -webkit-mask:
         linear-gradient(#fff 0 0) padding-box,
         linear-gradient(#fff 0 0);
 
-    -webkit-mask-composite:xor;
-    mask-composite:exclude;
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
 
-    opacity:0;
-    transition:.5s;
+    opacity: 0;
+    transition: .5s;
 
-    pointer-events:none;
+    pointer-events: none;
 }
 
-.achievement-item:hover::before{
-    opacity:1;
+.achievement-item:hover::before {
+    opacity: 1;
 }
 
 
@@ -2421,12 +2414,12 @@ img {
    CONTACT CARDS SHINE EFFECT
 ================================== */
 
-#contact .glass-card{
+#contact .glass-card {
     position: relative;
     overflow: hidden;
 }
 
-#contact .glass-card::after{
+#contact .glass-card::after {
     content: '';
     position: absolute;
     top: 0;
@@ -2435,19 +2428,17 @@ img {
     width: 100%;
     height: 100%;
 
-    background: linear-gradient(
-        90deg,
-        transparent,
-        rgba(255,255,255,.12),
-        transparent
-    );
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, .12),
+            transparent);
 
     transition: .8s ease;
 
     pointer-events: none;
 }
 
-#contact .glass-card:hover::after{
+#contact .glass-card:hover::after {
     left: 100%;
 }
 
@@ -2455,69 +2446,65 @@ img {
    CONTACT PREMIUM BORDER GLOW
 ================================== */
 
-#contact .glass-card::before{
-    content:'';
-    position:absolute;
-    inset:0;
-    border-radius:16px;
+#contact .glass-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 16px;
 
-    border:1px solid transparent;
+    border: 1px solid transparent;
 
     background:
-    linear-gradient(
-        135deg,
-        rgba(255,43,43,.4),
-        transparent,
-        rgba(255,43,43,.4)
-    ) border-box;
+        linear-gradient(135deg,
+            rgba(255, 43, 43, .4),
+            transparent,
+            rgba(255, 43, 43, .4)) border-box;
 
     -webkit-mask:
         linear-gradient(#fff 0 0) padding-box,
         linear-gradient(#fff 0 0);
 
-    -webkit-mask-composite:xor;
-    mask-composite:exclude;
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
 
-    opacity:0;
-    transition:.5s;
+    opacity: 0;
+    transition: .5s;
 
-    pointer-events:none;
+    pointer-events: none;
 }
 
-#contact .glass-card:hover::before{
-    opacity:1;
+#contact .glass-card:hover::before {
+    opacity: 1;
 }
 
 /* ==================================
    SEND MESSAGE BUTTON SHINE EFFECT
 ================================== */
 
-#contact .btn{
-    position:relative;
-    overflow:hidden;
+#contact .btn {
+    position: relative;
+    overflow: hidden;
 }
 
-#contact .btn::before{
-    content:'';
-    position:absolute;
-    top:0;
-    left:-100%;
+#contact .btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
 
-    width:100%;
-    height:100%;
+    width: 100%;
+    height: 100%;
 
-    background:linear-gradient(
-        90deg,
-        transparent,
-        rgba(255,255,255,.25),
-        transparent
-    );
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, .25),
+            transparent);
 
-    transition:.6s;
+    transition: .6s;
 }
 
-#contact .btn:hover::before{
-    left:100%;
+#contact .btn:hover::before {
+    left: 100%;
 }
 
 /* --- Footer --- */
@@ -2678,22 +2665,22 @@ img {
     }
 }
 
-@media (max-width:768px){
+@media (max-width:768px) {
 
-    .timeline::before{
-        left:20px;
+    .timeline::before {
+        left: 20px;
     }
 
-    .timeline-item{
-        width:100%;
-        left:0 !important;
-        text-align:left !important;
-        padding-left:60px;
-        padding-right:10px;
+    .timeline-item {
+        width: 100%;
+        left: 0 !important;
+        text-align: left !important;
+        padding-left: 60px;
+        padding-right: 10px;
     }
 
-    .timeline-dot{
-        left:10px !important;
+    .timeline-dot {
+        left: 10px !important;
     }
 
 }
@@ -2779,11 +2766,11 @@ img {
 }
 
 html,
-body{
-    width:100%;
-    overflow-x:hidden;
+body {
+    width: 100%;
+    overflow-x: hidden;
 }
 
-*{
-    max-width:100%;
+* {
+    max-width: 100%;
 }
