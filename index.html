@@ -23,20 +23,20 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 
 <body>
-    
+
     <div id="scroll-progress"></div>
 
     <!-- Profile Popup -->
-<div class="profile-popup" id="profilePopup">
-    <div class="popup-card">
-        <span class="close-popup">&times;</span><br>
+    <div class="profile-popup" id="profilePopup">
+        <div class="popup-card">
+            <span class="close-popup">&times;</span><br>
 
-        <p>Hey I'm Adi</p>
-        <p>You’ve entered AdyVerse <br> Explore about me</p>
+            <p>Hey I'm Adi</p>
+            <p>You’ve entered AdyVerse <br> Explore about me</p>
 
 
+        </div>
     </div>
-</div>
 
     <!-- Preloader -->
     <div id="preloader">
@@ -81,126 +81,100 @@
     <!-- Main Content -->
     <main class="main">
 
-        <!-- Home Section -->
-        <!-- <section class="home section" id="home">
-            <div class="container home-container grid">
+        <section class="home section" id="home">
+            <div class="hero-bg">
+                <span class="hero-orb orb-1"></span>
+                <span class="hero-orb orb-2"></span>
+                <span class="grid-lines"></span>
+            </div>
+
+            <div class="container home-container">
                 <div class="home-content">
-                    <div class="welcome-popup reveal-fade">Hello, World! I am</div>
-                    <h1 class="home-title reveal-up">Adittya <span>Saha</span></h1>
-                    <h3 class="home-subtitle reveal-up delay-1">Aspiring AI/ML Engineer</h3>
-                    <p class="home-description reveal-up delay-2">
-                        A Computer Science student with strong foundations in programming, web development,
-                        problem-solving, and communication skills. I build modern digital experiences.
-                    </p>
-                    <div class="home-buttons reveal-up delay-3">
-                        <a href="#projects" class="btn btn-primary"><i class="fas fa-rocket"></i>
-                    Explore Work</a>
-                        <a href="File/Adittya Saha's CV.pdf" download class="btn btn-outline"><i class="fas fa-download"></i>
-                            Download Resume</a>
+                    <div class="hero-badge reveal-up">
+                        <span class="badge-dot"></span>
+                        Hello, World! I'm
                     </div>
+
+                    <p class="hero-intro reveal-up delay-1"></p>
+
+                    <h1 class="home-title reveal-up delay-2">
+                        Adittya <span>Saha</span>
+                    </h1>
+
+                    <h2 class="home-subtitle reveal-up delay-3">
+                        Aspiring AI/ML Engineer
+                    </h2>
+
+                    <p class="home-description reveal-up delay-4">
+                        I’m a Computer Science student passionate about AI/ML, Python development,
+                        web engineering, and building modern digital products with clean UI and
+                        real-world functionality.
+                    </p>
+
+                    <div class="hero-highlights reveal-up delay-5">
+                        <div class="highlight-card">
+                            <strong>8.2</strong>
+                            <span>Current CGPA</span>
+                        </div>
+                        <div class="highlight-card">
+                            <strong>AI/ML</strong>
+                            <span>Core Focus</span>
+                        </div>
+                        <div class="highlight-card">
+                            <strong>Python • Webdev</strong>
+                            <span>Tech Stack</span>
+                        </div>
+                    </div>
+
+                    <div class="home-buttons reveal-up delay-6">
+                        <a href="#projects" class="btn btn-primary">
+                            <i class="fas fa-rocket"></i>
+                            Explore Work
+                        </a>
+
+                        <a href="Assets/Adittya Saha's CV.pdf" download class="btn btn-outline">
+                            <i class="fas fa-download"></i>
+                            Download Resume
+                        </a>
+                    </div>
+
+                    <!-- <div class="hero-socials reveal-up delay-6">
+                        <a href="https://github.com/Adi-Saha-07" target="_blank" rel="noopener noreferrer"
+                            aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/adittya-saha-1913622ab?" target="_blank"
+                            rel="noopener noreferrer" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="mailto:adityaadisaha07@gmail.com" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div> -->
                 </div>
-                <div class="home-img reveal-scale delay-2">
-                    <div class="img-wrapper glassmorphism">
+
+                <div class="home-visual reveal-scale delay-4">
+                    <div class="img-wrapper glass-card">
+                        <div class="image-ring"></div>
                         <img src="Pictures/ady.png" alt="Adittya Saha Profile" id="profile-img">
-                        <div class="glow-effect"></div>
+
+                        <div class="floating-card card-top">
+                            <i class="fas fa-brain"></i>
+                            <div>
+                                <strong>AI/ML Learner</strong>
+                            </div>
+                        </div>
+
+                        <div class="floating-card card-bottom">
+                            <i class="fas fa-code"></i>
+                            <div>
+                                <strong>Developer</strong>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section> -->
-
-
-        <section class="home section" id="home">
-  <div class="hero-bg">
-    <span class="hero-orb orb-1"></span>
-    <span class="hero-orb orb-2"></span>
-    <span class="grid-lines"></span>
-  </div>
-
-  <div class="container home-container">
-    <div class="home-content">
-      <div class="hero-badge reveal-up">
-        <span class="badge-dot"></span>
-        Hello, World! I'm
-      </div>
-
-      <p class="hero-intro reveal-up delay-1"></p>
-
-      <h1 class="home-title reveal-up delay-2">
-        Adittya <span>Saha</span>
-      </h1>
-
-      <h2 class="home-subtitle reveal-up delay-3">
-        Aspiring AI/ML Engineer
-      </h2>
-
-      <p class="home-description reveal-up delay-4">
-        I’m a Computer Science student passionate about AI/ML, Python development,
-        web engineering, and building modern digital products with clean UI and
-        real-world functionality.
-      </p>
-
-      <div class="hero-highlights reveal-up delay-5">
-        <div class="highlight-card">
-          <strong>10+</strong>
-          <span>Projects Built</span>
-        </div>
-        <div class="highlight-card">
-          <strong>AI/ML</strong>
-          <span>Core Focus</span>
-        </div>
-        <div class="highlight-card">
-          <strong>Python • Webdev</strong>
-          <span>Tech Stack</span>
-        </div>
-      </div>
-
-      <div class="home-buttons reveal-up delay-6">
-        <a href="#projects" class="btn btn-primary">
-          <i class="fas fa-rocket"></i>
-          Explore Work
-        </a>
-
-        <a href="Assets/Adittya Saha's CV.pdf" download class="btn btn-outline">
-          <i class="fas fa-download"></i>
-          Download Resume
-        </a>
-      </div>
-
-      <!-- <div class="hero-socials reveal-up delay-6">
-        <a href="https://github.com/Adi-Saha-07" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-          <i class="fab fa-github"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/adittya-saha-1913622ab?" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-          <i class="fab fa-linkedin-in"></i>
-        </a>
-        <a href="mailto:adityaadisaha07@gmail.com" aria-label="Email">
-          <i class="fas fa-envelope"></i>
-        </a>
-      </div> -->
-    </div>
-
-    <div class="home-visual reveal-scale delay-4">
-      <div class="img-wrapper glass-card">
-        <div class="image-ring"></div>
-        <img src="Pictures/ady.png" alt="Adittya Saha Profile" id="profile-img">
-
-        <div class="floating-card card-top">
-          <i class="fas fa-brain"></i>
-          <div>
-            <strong>AI/ML Learner</strong>
-          </div>
-        </div>
-
-        <div class="floating-card card-bottom">
-          <i class="fas fa-code"></i>
-          <div>
-            <strong>Developer</strong>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+        </section>
 
 
         <!-- About Section -->
@@ -233,71 +207,71 @@
             </div>
         </section>
 
-<section class="stats section" id="journey">
+        <section class="stats section" id="journey">
 
-    <div class="container">
+            <div class="container">
 
-        <div class="stats-heading">
-            <span>MY JOURNEY</span>
-            <h2>Numbers That Define Me</h2>
-            <p>Building skills, projects and experience one step at a time.</p>
-        </div>
-
-        <div class="stats-grid">
-
-            <div class="stat-card">
-                <div class="stat-icon">
-                    <i class="fas fa-rocket"></i>
+                <div class="stats-heading">
+                    <span>MY JOURNEY</span>
+                    <h2>Numbers That Define Me</h2>
+                    <p>Building skills, projects and experience one step at a time.</p>
                 </div>
 
-                <h2 class="counter" data-target="10">0</h2>
+                <div class="stats-grid">
 
-                <p>Projects Built</p>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
 
-                <span class="stat-bg">01</span>
-            </div>
+                        <h2 class="counter" data-target="10">0</h2>
 
-            <div class="stat-card">
-                <div class="stat-icon">
-                    <i class="fas fa-brain"></i>
+                        <p>Projects Built</p>
+
+                        <span class="stat-bg">01</span>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+
+                        <h2 class="counter" data-target="8.2">0</h2>
+
+                        <p>Current CGPA</p>
+
+                        <span class="stat-bg">02</span>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+
+                        <h2 class="counter" data-target="4">0</h2>
+
+                        <p>Certificates</p>
+
+                        <span class="stat-bg">03</span>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+
+                        <h2 class="counter" data-target="3">0</h2>
+
+                        <p>Years Coding</p>
+
+                        <span class="stat-bg">04</span>
+                    </div>
+
                 </div>
 
-                <h2 class="counter" data-target="8.2">0</h2>
-
-                <p>Current CGPA</p>
-
-                <span class="stat-bg">02</span>
             </div>
 
-            <div class="stat-card">
-                <div class="stat-icon">
-                    <i class="fas fa-award"></i>
-                </div>
-
-                <h2 class="counter" data-target="4">0</h2>
-
-                <p>Certificates</p>
-
-                <span class="stat-bg">03</span>
-            </div>
-
-            <div class="stat-card">
-                <div class="stat-icon">
-                    <i class="fas fa-code"></i>
-                </div>
-
-                <h2 class="counter" data-target="3">0</h2>
-
-                <p>Years Coding</p>
-
-                <span class="stat-bg">04</span>
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
+        </section>
 
 
         <!-- Education Section -->
@@ -314,9 +288,9 @@
                             <p class="timeline-institution">Jaypee University Anoopshahr</p>
                             <ul class="timeline-details">
                                 <li><strong>Specialization:</strong> Computer Science</li>
-                                <li><strong>Current Semester:</strong> 4th</li>
+                                <li><strong>Current Semester:</strong> 5th</li>
                                 <li><strong>SGPA:</strong> 9.1 | <strong>CGPA:</strong> 8.2 </li>
-                                <li><strong>Location:</strong> Anoopshahr, Bulandshahr, UP</li>
+                                <li><strong>Location:</strong> Delhi-NCR, Bulandshahr, UP</li>
                             </ul>
                         </div>
                     </div>
@@ -355,47 +329,47 @@
         </section>
 
         <!-- Skills Section -->
-<section class="skills section" id="skills">
-    <div class="container">
-        <h2 class="section-title reveal-up">My <span>Skills</span></h2>
-        <div class="skills-container glass-card reveal-up delay-1">
-            <div class="sphere-container">
-                <canvas id="skillCanvas" width="500" height="500">
-                    Your browser does not support canvas.
-                </canvas>
-                <div id="tags">
-                    <ul>
-                        <li><a href="#">HTML5</a></li>
-                        <li><a href="#">CSS3</a></li>
-                        <li><a href="#">JavaScript</a></li>
-                        <li><a href="#">Python</a></li>
-                        <li><a href="#">C</a></li>
-                        <li><a href="#">C++</a></li>
-                        <li><a href="#">R</a></li>
-                        <li><a href="#">React</a></li>
-                        <li><a href="#">NumPy</a></li>
-                        <li><a href="#">Pandas</a></li>
-                        <li><a href="#">Matplotlib</a></li>
-                        <li><a href="#">Seaborn</a></li>
-                        <li><a href="#">MySQL</a></li>
-                        <li><a href="#">GitHub</a></li>
-                        <li><a href="#">VS Code</a></li>
-                        <li><a href="#">Vercel</a></li>
-                        <li><a href="#">ChatGPT</a></li>
-                        <li><a href="#">Gemini</a></li>
-                        <li><a href="#">Claude</a></li>
-                        <li><a href="#">Perplexity</a></li>
-                        <li><a href="#">AI</a></li>
-                        <li><a href="#">Machine Learning</a></li>
-                        <li><a href="#">Problem Solving</a></li>
-                        <li><a href="#">API Integration</a></li>
-                        <li><a href="#">UI/UX Design</a></li>
-                    </ul>
+        <section class="skills section" id="skills">
+            <div class="container">
+                <h2 class="section-title reveal-up">My <span>Skills</span></h2>
+                <div class="skills-container glass-card reveal-up delay-1">
+                    <div class="sphere-container">
+                        <canvas id="skillCanvas" width="500" height="500">
+                            Your browser does not support canvas.
+                        </canvas>
+                        <div id="tags">
+                            <ul>
+                                <li><a href="#">HTML5</a></li>
+                                <li><a href="#">CSS3</a></li>
+                                <li><a href="#">JavaScript</a></li>
+                                <li><a href="#">Python</a></li>
+                                <li><a href="#">C</a></li>
+                                <li><a href="#">C++</a></li>
+                                <li><a href="#">R</a></li>
+                                <li><a href="#">NumPy</a></li>
+                                <li><a href="#">Pandas</a></li>
+                                <li><a href="#">Matplotlib</a></li>
+                                <li><a href="#">Seaborn</a></li>
+                                <li><a href="#">MySQL</a></li>
+                                <li><a href="#">MS Excel</a></li>
+                                <li><a href="#">GitHub</a></li>
+                                <li><a href="#">VS Code</a></li>
+                                <li><a href="#">Antigravity</a></li>
+                                <li><a href="#">Vercel</a></li>
+                                <li><a href="#">ChatGPT</a></li>
+                                <li><a href="#">Gemini</a></li>
+                                <li><a href="#">Claude</a></li>
+                                <li><a href="#">Perplexity</a></li>
+                                <li><a href="#">AI</a></li>
+                                <li><a href="#">Machine Learning</a></li>
+                                <li><a href="#">Problem Solving</a></li>
+                                <li><a href="#">UI/UX Design</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
+        </section>
 
         <!-- Projects Section -->
         <section class="projects section" id="projects">
@@ -421,7 +395,8 @@
                                 <a href="https://adyverse.vercel.app/" target="_blank" class="project-btn">
                                     <i class="fas fa-globe"></i> Visit Website
                                 </a>
-                                <a href="https://github.com/Adi-Saha-07/Adi_Resume" target="_blank" class="project-btn github-btn">
+                                <a href="https://github.com/Adi-Saha-07/Adi_Resume" target="_blank"
+                                    class="project-btn github-btn">
                                     <i class="fab fa-github"></i> GitHub Repo
                                 </a>
                             </div>
@@ -445,7 +420,8 @@
                                 <a href="https://deepthinkpa.vercel.app/" target="_blank" class="project-btn">
                                     <i class="fas fa-globe"></i> Visit Website
                                 </a>
-                                <a href="https://github.com/Adi-Saha-07/DeepThink" target="_blank" class="project-btn github-btn">
+                                <a href="https://github.com/Adi-Saha-07/DeepThink" target="_blank"
+                                    class="project-btn github-btn">
                                     <i class="fab fa-github"></i> GitHub Repo
                                 </a>
                             </div>
@@ -464,7 +440,8 @@
                                 <span>Python</span><span>JSON</span><span>Console</span>
                             </div>
                             <div class="project-buttons">
-                                <a href="https://github.com/Adi-Saha-07/Python-Project/tree/main/Student's%20Data" target="_blank" class="project-btn github-btn">
+                                <a href="https://github.com/Adi-Saha-07/Python-Project/tree/main/Student's%20Data"
+                                    target="_blank" class="project-btn github-btn">
                                     <i class="fab fa-github"></i> GitHub Repo
                                 </a>
                             </div>
@@ -483,7 +460,8 @@
                                 <span>C++</span><span>Logic</span><span>Game</span>
                             </div>
                             <div class="project-buttons">
-                                <a href="https://github.com/Adi-Saha-07/Cpp-Projects/blob/main/quiz_game.c%2B%2B" target="_blank" class="project-btn github-btn">
+                                <a href="https://github.com/Adi-Saha-07/Cpp-Projects/blob/main/quiz_game.c%2B%2B"
+                                    target="_blank" class="project-btn github-btn">
                                     <i class="fab fa-github"></i> GitHub Repo
                                 </a>
                             </div>
@@ -496,47 +474,143 @@
         <!-- Gallery Section -->
         <section class="gallery section" id="gallery">
             <div class="container">
-                <h2 class="section-title reveal-up">Certificates & <span>Achievements</span></h2>
+                <h2 class="section-title reveal-up">Certificates <span>Achievements</span></h2>
 
                 <h3 class="gallery-subtitle reveal-up">Certificates</h3>
-                <div class="gallery-grid">
-                    <div class="gallery-item glass-card reveal-scale">
-                        <div class="project-img">
-                            <div class="project-placeholder">
-                                <img src="Pictures/Certificates/Python.jpg" alt="Python Programming">
+
+                <section class="gallery section" id="gallery">
+
+                    <div class="container">
+
+
+                        <div class="gallery-grid">
+
+                            <!-- Python -->
+                            <div class="certificate-card glass-card reveal-scale">
+
+                                <div class="certificate-image">
+                                    <img src="Pictures/Certificates/Python.jpg" alt="">
+                                </div>
+
+                                <div class="certificate-content">
+
+                                    <h4>Python Programming</h4>
+
+                                    <p class="certificate-provider">
+                                        GeeksforGeeks
+                                    </p>
+
+                                    <span class="certificate-date">
+                                        Issued • 2025
+                                    </span>
+
+                                    <a href="Pictures/Certificates/Python.jpg" target="_blank" class="certificate-btn">
+
+                                        <i class="fas fa-certificate"></i>
+                                        View Certificate
+
+                                    </a>
+
+                                </div>
+
                             </div>
-                        </div> <br>
-                        <h4>Python Programming</h4>
-                        <p>GeeksforGeeks</p>
-                    </div>
-                    <div class="gallery-item glass-card reveal-scale delay-1">
-                        <div class="project-img">
-                            <div class="project-placeholder">
-                                <img src="Pictures/Certificates/CyberSecurity.jpg" alt="Python Programming">
+
+                            <!-- Cyber Security -->
+                            <div class="certificate-card glass-card reveal-scale delay-1">
+
+                                <div class="certificate-image">
+                                    <img src="Pictures/Certificates/CyberSecurity.jpg" alt="">
+                                </div>
+
+                                <div class="certificate-content">
+
+                                    <h4>Introduction to Cyber Security</h4>
+
+                                    <p class="certificate-provider">
+                                        Simplilearn
+                                    </p>
+
+                                    <span class="certificate-date">
+                                        12 December 2025
+                                    </span>
+
+                                    <a href="Pictures/Certificates/CyberSecurity.jpg" target="_blank"
+                                        class="certificate-btn">
+
+                                        <i class="fas fa-certificate"></i>
+                                        View Certificate
+
+                                    </a>
+
+                                </div>
+
                             </div>
-                        </div> <br>
-                        <h4>Intro to Cyber Security</h4>
-                        <p>Simplilearn</p>
-                    </div>
-                    <div class="gallery-item glass-card reveal-scale delay-2">
-                        <div class="project-img">
-                            <div class="project-placeholder">
-                                <img src="Pictures/Certificates/ChatGPT.jpg" alt="Python Programming">
+
+                            <!-- ChatGPT -->
+                            <div class="certificate-card glass-card reveal-scale delay-2">
+
+                                <div class="certificate-image">
+                                    <img src="Pictures/Certificates/ChatGPT.jpg" alt="">
+                                </div>
+
+                                <div class="certificate-content">
+
+                                    <h4>OpenAI ChatGPT Master</h4>
+
+                                    <p class="certificate-provider">
+                                        Udemy
+                                    </p>
+
+                                    <span class="certificate-date">
+                                        18 December 2025
+                                    </span>
+
+                                    <a href="Pictures/Certificates/ChatGPT.jpg" target="_blank" class="certificate-btn">
+
+                                        <i class="fas fa-certificate"></i>
+                                        View Certificate
+
+                                    </a>
+
+                                </div>
+
                             </div>
-                        </div> <br>
-                        <h4>OpenAI ChatGPT Master</h4>
-                        <p>Udemy</p>
-                    </div>
-                    <div class="gallery-item glass-card reveal-scale delay-3">
-                        <div class="project-img">
-                            <div class="project-placeholder">
-                                <img src="Pictures/Certificates/AIERA.jpg" alt="Python Programming">
+
+                            <!-- AI Era -->
+                            <div class="certificate-card glass-card reveal-scale delay-3">
+
+                                <div class="certificate-image">
+                                    <img src="Pictures/Certificates/AIERA.jpg" alt="">
+                                </div>
+
+                                <div class="certificate-content">
+
+                                    <h4>Critical Thinking in AI Era</h4>
+
+                                    <p class="certificate-provider">
+                                        HP Foundation
+                                    </p>
+
+                                    <span class="certificate-date">
+                                        17 December 2025
+                                    </span>
+
+                                    <a href="Pictures/Certificates/AIERA.jpg" target="_blank" class="certificate-btn">
+
+                                        <i class="fas fa-certificate"></i>
+                                        View Certificate
+
+                                    </a>
+
+                                </div>
+
                             </div>
-                        </div> <br>
-                        <h4>Critical Thinking in AI Era</h4>
-                        <p>Certification</p>
+
+                        </div>
+
                     </div>
-                </div>
+
+                </section>
 
                 <h3 class="gallery-subtitle reveal-up" style="margin-top: 3rem;">Achievements</h3>
                 <div class="achievements-list reveal-up delay-1">
@@ -567,7 +641,7 @@
                     <div class="contact-info glass-card reveal-slide-left">
                         <h3 class="contact-subtitle">Let's Connect</h3>
                         <p class="contact-text">
-                            I'm currently looking for new opportunities. 
+                            I'm currently looking for new opportunities.
                             Whether you have a question or just want to say hi,
                             I'll try my best to get back to you.
                         </p>
@@ -576,15 +650,17 @@
                             <div class="contact-item">
                                 <i class="fas fa-phone-alt contact-icon"></i>
                                 <div>
-                                    <span><a href="tel:" class="a1">+91 XXXXXXXX43</a></span><br>
-                                    <span><a href="tel:" class="a1">+91 XXXXXXXX23</a></span>
+                                    <span><a href="tel:+918167381643" class="a1">+91 8167381643</a></span><br>
+                                    <span><a href="tel:+917864806723" class="a1">+91 7864806723</a></span>
                                 </div>
                             </div>
                             <div class="contact-item">
                                 <i class="fas fa-envelope contact-icon"></i>
                                 <div>
-                                    <span><a href="mailto:" class="a1">XXXXXXXXXXXXX07@gmail.com</a></span><br>
-                                    <span><a href="mailto:8824209033@mail.jaypeeu.ac.in" class="a1">8824209033@mail.jaypeeu.ac.in</a></span>
+                                    <span><a href="mailto:adityaadisaha@gmail.com"
+                                            class="a1">adityaadisaha@gmail.com</a></span><br>
+                                    <span><a href="mailto:8824209033@mail.jaypeeu.ac.in"
+                                            class="a1">8824209033@mail.jaypeeu.ac.in</a></span>
                                 </div>
                             </div>
                             <div class="contact-item">
@@ -596,18 +672,24 @@
                         </div>
 
                         <div class="contact-social">
-                            <a href="https://www.instagram.com/aditya_adi_saha?igsh=MTVhaTUxNGVodWlucQ==" class="social-link" title="Instagram"><i class="fab fa-instagram"></i></a>
-                            <a href="https://www.facebook.com/share/1BhShULHUb/" class="social-link" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-                            <a href="https://github.com/Adi-Saha-07" class="social-link" title="GitHub"><i class="fab fa-github"></i></a>
-                            <a href="https://www.linkedin.com/in/adittya-saha-1913622ab?" class="social-link" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.instagram.com/aditya_adi_saha?igsh=MTVhaTUxNGVodWlucQ=="
+                                class="social-link" title="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.facebook.com/share/1BhShULHUb/" class="social-link" title="Facebook"><i
+                                    class="fab fa-facebook-f"></i></a>
+                            <a href="https://github.com/Adi-Saha-07" class="social-link" title="GitHub"><i
+                                    class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/adittya-saha-1913622ab?" class="social-link"
+                                title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                         </div>
                     </div>
 
                     <div class="contact-form-container glass-card reveal-slide-right">
-                        <form action="https://formspree.io/f/mzzklloe" method="POST" class="contact-form" id="contactForm">
+                        <form action="https://formspree.io/f/mzzklloe" method="POST" class="contact-form"
+                            id="contactForm">
                             <div class="form-group grid">
                                 <div class="form-control">
-                                    <input type="text" name="First Name" id="firstName" placeholder="First Name" required>
+                                    <input type="text" name="First Name" id="firstName" placeholder="First Name"
+                                        required>
                                 </div>
                                 <div class="form-control">
                                     <input type="text" name="Last Name" id="lastName" placeholder="Last Name" required>
